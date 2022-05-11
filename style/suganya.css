@@ -23,6 +23,10 @@
   width: 65%;
 }
 
+.navbar_brand .menu {
+  display: none;
+}
+
 .navbar_brand .navbar ul {
   list-style: none;
   display: -webkit-box;
@@ -99,6 +103,12 @@
 }
 
 @media (max-width: 1200px) {
+  .navbar_brand .menu {
+    display: inline;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    font-size: 30px;
+  }
   .navbar_brand .navbar {
     display: none;
   }

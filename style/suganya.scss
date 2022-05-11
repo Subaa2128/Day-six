@@ -18,6 +18,9 @@
   .logo img {
     width: 65%;
   }
+  .menu {
+    display: none;
+  }
   .navbar {
     ul {
       list-style: none;
@@ -84,6 +87,11 @@
 
 @media (max-width: 1200px) {
   .navbar_brand {
+    .menu {
+      display: inline;
+      justify-self: end;
+      font-size: 30px;
+    }
     .navbar {
       display: none;
     }
