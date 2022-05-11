@@ -1,0 +1,127 @@
+@import "button";
+@import "color";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    .header{
+        
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+        padding: 10px 20px;
+        width: 100%;
+        height: 13vh;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        .logo{
+            img{
+                width: 65%;
+            }
+        }
+        .navbar{
+            ul{
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                li{
+                    position: relative;
+                    font-size: .9rem;
+                    &:hover{
+                        .drop{
+                            display: block;
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        font-size: 10px;
+                    }
+                    .drop{
+                        display: none;
+                        line-height: 3;
+                        position: absolute;
+                        margin-top: 50px;
+                        background-color: #fff;
+                        width: 300px;
+                        border-radius: 4px;
+                        .drop-down{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border-bottom: 1px solid gray;
+                            padding: 0 15px;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: #000;
+                            padding-left: 10px;
+                            font-size: 15px;
+                        }
+                    }
+                    .wrapper .button{
+                        display: inline-block;
+                        height: 40px;
+                        width: 40px;
+                        margin: 0 5px;
+                        overflow: hidden;
+                        background: #fff;
+                        border-radius: 50px;
+                        cursor: pointer;
+                        box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
+                        transition: all 0.3s ease-out;
+                        .icon{
+                            display: inline-block;
+                            height: 10px;
+                            width: 35px;
+                            text-align: center;
+                            border-radius: 50px;
+                            box-sizing: border-box;
+                            line-height: 40px;
+                            i{
+                                color: #25d362;
+                                font-size: 25px;
+                                line-height: 39px;
+                            }
+                            i.fa-solid.fa-phone{
+                                color: #000;
+                                font-size: 25px;
+                                line-height: 39px;
+                            }
+                        }
+                        span{
+                            font-size: 20px;
+                            font-weight: 500;
+                            line-height: 30px;
+                            margin-left: 15px;
+                        }
+                    }
+                    .wrapper .button:hover{
+                        width: 200px;
+                    }
+                    .btn{
+                       button{
+                        @extend .button-basic;
+                        color: #fff;
+                        background: $blue;
+                       }
+                       button:hover{
+                           background: $orange;
+                       }
+                    }
+                }
+            }
+        }
+    }
+    .header.black{
+        box-shadow: 0 0 20px black;
+    }
+}

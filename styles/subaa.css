@@ -1,0 +1,156 @@
+.button-basic, nav .header .navbar ul li .btn button {
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 300;
+  border: 1px solid gray;
+  padding: 10px 25px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav .header {
+  background: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  height: 13vh;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+nav .header .logo img {
+  width: 65%;
+}
+
+nav .header .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+nav .header .navbar ul li {
+  position: relative;
+  font-size: .9rem;
+}
+
+nav .header .navbar ul li:hover .drop {
+  display: block;
+}
+
+nav .header .navbar ul li a {
+  text-decoration: none;
+  font-size: 10px;
+}
+
+nav .header .navbar ul li .drop {
+  display: none;
+  line-height: 3;
+  position: absolute;
+  margin-top: 50px;
+  background-color: #fff;
+  width: 300px;
+  border-radius: 4px;
+}
+
+nav .header .navbar ul li .drop .drop-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid gray;
+  padding: 0 15px;
+}
+
+nav .header .navbar ul li .drop a {
+  text-decoration: none;
+  color: #000;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+nav .header .navbar ul li .wrapper .button {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+nav .header .navbar ul li .wrapper .button .icon {
+  display: inline-block;
+  height: 10px;
+  width: 35px;
+  text-align: center;
+  border-radius: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 40px;
+}
+
+nav .header .navbar ul li .wrapper .button .icon i {
+  color: #25d362;
+  font-size: 25px;
+  line-height: 39px;
+}
+
+nav .header .navbar ul li .wrapper .button .icon i.fa-solid.fa-phone {
+  color: #000;
+  font-size: 25px;
+  line-height: 39px;
+}
+
+nav .header .navbar ul li .wrapper .button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-left: 15px;
+}
+
+nav .header .navbar ul li .wrapper .button:hover {
+  width: 200px;
+}
+
+nav .header .navbar ul li .btn button {
+  color: #fff;
+  background: #15426d;
+}
+
+nav .header .navbar ul li .btn button:hover {
+  background: #efa434;
+}
+
+nav .header.black {
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+}
+/*# sourceMappingURL=subaa.css.map */
