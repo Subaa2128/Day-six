@@ -196,11 +196,19 @@
     display: flex;
     align-items: center;
     text-align: center;
+    position: absolute;
+    gap: 0.2em;
+    top: 60%;
+    left: 35%;
+
     .google img {
       width: 30px;
     }
     i {
       color: #fca311;
+    }
+    .google_play img {
+      width: 100%;
     }
   }
 }

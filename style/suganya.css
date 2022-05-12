@@ -259,6 +259,10 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  position: absolute;
+  gap: 0.2em;
+  top: 60%;
+  left: 35%;
 }
 
 .background_image .moblie_app .google img {
@@ -267,6 +271,10 @@
 
 .background_image .moblie_app i {
   color: #fca311;
+}
+
+.background_image .moblie_app .google_play img {
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
