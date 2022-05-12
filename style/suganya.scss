@@ -1,0 +1,244 @@
+@import "button";
+@import "collaborate";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.navbar_brand {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  z-index: 1000;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 30px;
+  .logo img {
+    width: 65%;
+  }
+  .open_menu {
+    display: none;
+  }
+  .close_menu {
+    display: none;
+  }
+
+  .navbar {
+    margin-top: 15px;
+    ul {
+      list-style: none;
+      @include collaborate;
+      li {
+        &:hover {
+          .drop {
+            display: block;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: #6d6875;
+          position: relative;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .fa-caret-down {
+          font-size: 15px;
+          vertical-align: 0.24em;
+        }
+      }
+    }
+    .btn {
+      button {
+        @extend .button_format;
+        background-color: #1b3b6f;
+        color: #ffffff;
+      }
+      button:hover {
+        background: #ff9f1c;
+      }
+    }
+
+    .drop {
+      display: none;
+      line-height: 3;
+      position: absolute;
+      margin-top: 15px;
+      box-shadow: 0 2px 10px 0 rgb(0, 0, 0.3);
+      background-color: #fff;
+      width: 300px;
+      border-radius: 5px;
+      .drop_down:hover {
+        background-color: #fca311;
+        color: #ffffff;
+        p:hover {
+          color: #ffffff;
+        }
+      }
+      p {
+        color: #1d4e89;
+        font-weight: bold;
+        padding-left: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .drop_down {
+        @include collaborate;
+        align-items: center;
+        border-bottom: 1px solid gray;
+        padding: 0 15px;
+      }
+    }
+    .fa-whatsapp {
+      font-weight: bold;
+      color: #25d362;
+      font-size: 25px;
+
+      p {
+        color: #6d6875;
+        font-size: 20px;
+        margin-top: 5px;
+      }
+    }
+    .fa-phone {
+      color: #14213d;
+      font-size: 24px;
+      font-weight: bold;
+
+      p {
+        color: #6d6875;
+        font-size: 20px;
+        margin-top: 5px;
+      }
+    }
+    .fa-play {
+      font-size: 10px;
+    }
+  }
+}
+.navbar_brand.shadow {
+  box-shadow: 0 0 20px black;
+}
+.background_image {
+  background-image: url(/asset/images/backgroung.jpg);
+  background-size: 100% 84%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 5rem;
+  height: 100vh;
+  .search_box {
+    .search {
+      @include collaborate;
+      position: absolute;
+      border: 0.5px solid gray;
+      align-items: center;
+      gap: 0.1em;
+      padding: 0 1em;
+      color: #9aaa97;
+      width: 50%;
+      margin-top: 60px;
+      transform: translate(55%, 50%);
+      input {
+        height: 60px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        padding: 15px;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar_brand {
+    .logo {
+      width: 145%;
+    }
+    .open_menu {
+      display: inline;
+      justify-self: end;
+      cursor: pointer;
+
+      i {
+        font-size: 40px;
+      }
+    }
+    .close_menu {
+      font-size: 35px;
+      margin-left: 40px;
+      cursor: pointer;
+      color: #ffffff;
+    }
+    .navbar {
+      display: none;
+      position: fixed;
+      right: 0;
+      width: 70%;
+      height: 100vh;
+      margin-top: 0;
+      top: 0;
+      background-color: #15426d;
+      // z-index: 1000;
+      padding: 15px 0;
+      ul {
+        display: block;
+
+        li {
+          @include collaborate;
+          align-items: center;
+          padding: 15px;
+          color: #ffffff;
+          a {
+            color: #ffffff;
+            font-weight: normal;
+          }
+          .drop {
+            width: 100%;
+            position: relative;
+            opacity: 1;
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+      .fa-whatsapp {
+        color: #ffffff;
+        font-size: 30px;
+        p {
+          color: #ffffff;
+          font-weight: normal;
+        }
+      }
+      .fa-phone {
+        color: #ffffff;
+        font-size: 30px;
+        p {
+          color: #ffffff;
+          font-weight: normal;
+        }
+      }
+      .btn {
+        button {
+          background-color: #ff9f1c;
+          &:hover {
+            background: #1b3b6f;
+          }
+        }
+      }
+    }
+    .open_menu,
+    .close_menu {
+      display: flex;
+    }
+  }
+}
