@@ -1,6 +1,12 @@
-@mixin button {
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 300;
-    border: 1px solid gray;
+@mixin center {
+    align-items: center;
+    justify-content: center;
+    display: none;
+    cursor: pointer;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
