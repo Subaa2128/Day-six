@@ -2,8 +2,8 @@
   border-radius: 5px;
   font-size: 20px;
   font-weight: 300;
-  border: 1px solid gray;
-  padding: 10px 25px;
+  border: none;
+  padding: 5px 25px;
 }
 
 * {
@@ -22,9 +22,8 @@ nav .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 20px;
+  padding: 5px 20px;
   width: 100%;
-  height: 13vh;
   position: fixed;
   top: 0;
   left: 0px;
@@ -33,7 +32,7 @@ nav .header {
 }
 
 nav .header .logo img {
-  width: 65%;
+  width: 150px;
 }
 
 nav .header .navbar ul {
@@ -44,6 +43,10 @@ nav .header .navbar ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   list-style: none;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .header .navbar ul li {
@@ -56,17 +59,32 @@ nav .header .navbar ul li:hover .drop {
 }
 
 nav .header .navbar ul li a {
+  position: relative;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 15px;
+  margin-right: 5px;
+  text-transform: capitalize;
+  color: #444444;
+}
+
+nav .header .navbar ul li a:hover {
+  color: #15426d;
+}
+
+nav .header .navbar ul li i {
+  vertical-align: 0.2em;
 }
 
 nav .header .navbar ul li .drop {
   display: none;
-  line-height: 3;
+  line-height: 2.7;
   position: absolute;
-  margin-top: 50px;
+  margin-top: 15px;
   background-color: #fff;
   width: 300px;
+  border: 1px solid #e6e6e6;
+  -webkit-box-shadow: 0 2px 10px 0 #444444;
+          box-shadow: 0 2px 10px 0 #444444;
   border-radius: 4px;
 }
 
@@ -80,26 +98,36 @@ nav .header .navbar ul li .drop .drop-down {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid gray;
-  padding: 0 15px;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0 10px;
 }
 
-nav .header .navbar ul li .drop a {
+nav .header .navbar ul li .drop .drop-down:hover {
+  background: #15426d;
+  color: #fff;
+}
+
+nav .header .navbar ul li .drop .drop-down a {
+  text-transform: capitalize;
   text-decoration: none;
   color: #000;
-  padding-left: 10px;
-  font-size: 15px;
+  font-size: 13px;
+}
+
+nav .header .navbar ul li .drop .drop-down a:hover {
+  color: #fff;
 }
 
 nav .header .navbar ul li .wrapper .button {
   display: inline-block;
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   margin: 0 5px;
   overflow: hidden;
   background: #fff;
   border-radius: 50px;
   cursor: pointer;
+  border: 1px solid #e6e6e6;
   -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   -webkit-transition: all 0.3s ease-out;
@@ -109,7 +137,7 @@ nav .header .navbar ul li .wrapper .button {
 nav .header .navbar ul li .wrapper .button .icon {
   display: inline-block;
   height: 10px;
-  width: 35px;
+  width: 25px;
   text-align: center;
   border-radius: 50px;
   -webkit-box-sizing: border-box;
@@ -119,20 +147,20 @@ nav .header .navbar ul li .wrapper .button .icon {
 
 nav .header .navbar ul li .wrapper .button .icon i {
   color: #25d362;
-  font-size: 25px;
-  line-height: 39px;
+  font-size: 20px;
+  line-height: 35px;
 }
 
 nav .header .navbar ul li .wrapper .button .icon i.fa-solid.fa-phone {
   color: #000;
-  font-size: 25px;
-  line-height: 39px;
+  font-size: 20px;
+  line-height: 35px;
 }
 
 nav .header .navbar ul li .wrapper .button span {
   font-size: 20px;
   font-weight: 500;
-  line-height: 30px;
+  vertical-align: 0.3rem;
   margin-left: 15px;
 }
 
@@ -149,8 +177,142 @@ nav .header .navbar ul li .btn button:hover {
   background: #efa434;
 }
 
+nav .header .open-nav-menu {
+  height: 34px;
+  width: 40px;
+  position: relative;
+  justify-self: flex-end;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+nav .header .open-nav-menu span {
+  display: block;
+  height: 3.5px;
+  width: 30px;
+  background-color: #000;
+  position: relative;
+  border-radius: 15px;
+}
+
+nav .header .open-nav-menu span:before, nav .header .open-nav-menu span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 15px;
+}
+
+nav .header .open-nav-menu span:before {
+  top: -7px;
+}
+
+nav .header .open-nav-menu span:after {
+  top: 7px;
+}
+
+nav .header .close-nav-menu {
+  height: 40px;
+  width: 40px;
+  margin: 0 0 15px 15px;
+  cursor: pointer;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .header .close-nav-menu i {
+  font-size: 30px;
+  color: #fff;
+}
+
+nav .header .close-nav-menu i:hover {
+  color: #efa434;
+}
+
 nav .header.black {
+  margin-top: -5px;
   -webkit-box-shadow: 0 0 20px black;
           box-shadow: 0 0 20px black;
+}
+
+nav .icons #menu-btn {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  nav .header .navbar {
+    display: none;
+    position: fixed;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    background-color: #15426d;
+    padding: 15px 0;
+  }
+  nav .header .navbar ul {
+    display: block;
+  }
+  nav .header .navbar ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 15px;
+  }
+  nav .header .navbar ul li a {
+    color: #fff;
+  }
+  nav .header .navbar ul li a:hover {
+    color: #efa434;
+  }
+  nav .header .navbar ul li i {
+    color: #fff;
+  }
+  nav .header .navbar ul li .drop {
+    width: 100%;
+    position: relative;
+    opacity: 1;
+    left: 0;
+    width: 100%;
+  }
+  nav .header .navbar ul li .drop .drop-down:hover {
+    background: #efa434;
+  }
+  nav .header .navbar ul li .btn button {
+    background-color: #efa434;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
+  nav .header .navbar ul li .btn button:hover {
+    background: #e6e6e6;
+    color: #000;
+  }
+  nav .header .close-nav-menu,
+  nav .header .open-nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=subaa.css.map */
