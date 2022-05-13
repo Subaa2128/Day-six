@@ -347,7 +347,9 @@ section{
             .play{
                 display:block;
                 p{
+                    font-size: 15px;
                     font-weight: bold;
+                    margin-left: 8px ;
                    @media(max-width:900px){
                     margin-top: 10px;
                     margin-bottom: -20px;
@@ -391,7 +393,58 @@ section{
 
 
 
+section{
+    .choose-corpiz{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 0 20px 40px;
+        margin-top: -50px;
+        @media (max-width:900px){
+            display: block;
+        }
+        @media (max-width:480px){
+            padding: 0 5px;
+        }
+        .corpiz{
+            background-color: $blue;
+            color: $white;
+            padding: 100px 40px;
+            h2{
+                padding-bottom: 50px;
+                text-transform: capitalize;
+            }
+        }
+        .national-top{
+            display: block;
+            .cards{
+                .card{
+                    display: grid;
+                    grid-template-columns: 1fr 3fr;
+                    padding: 20px;
+                    margin: 10px;
+                    border: 1px solid $blue;
+                    animation: pulse 4s ease-out infinite;
+                    @keyframes pulse{
+                        10%{
+                            transform: scale(0.9);
 
+                        }
+                    }
+                    @media (max-width:580px){
+                        display: block;
+                        align-items: center;
+                        text-align: center;
+                    }
+                    .logo{
+                        img{
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
