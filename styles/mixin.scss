@@ -1,0 +1,19 @@
+@mixin center {
+    align-items: center;
+    justify-content: center;
+    display: none;
+    cursor: pointer;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}

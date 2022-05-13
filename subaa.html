@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corpbiz</title>
+
+    <link rel="stylesheet" href="./styles/subaa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="header">
+            <div class="logo">
+                <img src="./assets/images/logo.corp.png" alt="">
+            </div>
+            <div class="open-nav-menu" onclick="openMenu()">
+                <span></span>
+            </div>
+            <div class="navbar">
+                <div class="close-nav-menu" onclick="closeMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <ul>
+                    <li><a href="#">startup</a><i class="fa-solid fa-sort-down"></i>
+                        <div class="drop">
+                            <div class="drop-down">
+                                <a href="#">business registrations</a><i class="fa-solid fa-sort-down"></i>   
+                            </div>
+                            <div class="drop-down">
+                                <a href="#">government registrations</a><i class="fa-solid fa-sort-down"></i>
+                            </div>
+                            <div class="drop-down">
+                                <a href="#">NGO & IPR</a><i class="fa-solid fa-sort-down"></i>
+                            </div>
+                            <div class="drop-down">
+                                <a href="#">conversion & closure</a><i class="fa-solid fa-sort-down"></i>
+                            </div>
+                            <div class="drop-down">
+                                <a href="#">compliances</a><i class="fa-solid fa-sort-down"></i>
+                            </div>
+                        </div>    
+                    </li>
+                    <li><a href="#">regulatory</a><i class="fa-solid fa-sort-down"></i>
+                    <div class="drop">
+                        <div class="drop-down">
+                            <a href="#">RBI</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">SEBI</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">IRDA</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">FEMA</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                    </div></li>
+                    <li><a href="#">environment laws</a><i class="fa-solid fa-sort-down"></i>
+                    <div class="drop">
+                        <div class="drop-down">
+                            <a href="#">pollution NOC</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">E-Waste</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                    </div></li>
+                    <li><a href="#">tax & financial</a><i class="fa-solid fa-sort-down"></i>
+                    <div class="drop">
+                        <div class="drop-down">
+                            <a href="#">Accounting & book keeping services</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">Advisory services</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">tax filling</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">business document templates</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">service related</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">property related</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">legal disputes</a><i class="fa-solid fa-sort-down"></i>
+                        </div>
+                    </div></li>
+                    <li><a href="#">company</a><i class="fa-solid fa-sort-down"></i>
+                    <div class="drop">
+                        <div class="drop-down">
+                            <a href="#">about us</a>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">learning</a>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">newsletter</a>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">publication</a>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">are you a CA/CS?</a>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">media</a>
+                        </div>
+                        <div class="drop-down">
+                            <a href="#">contact us</a>
+                        </div>
+                    </div></li>
+                    <li><div class="wrapper">
+                        <div class="button">
+                            <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <span>9289379709</span>
+                        </div>
+                    </div></li>
+                    <li><div class="wrapper">
+                        <div class="button">
+                            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                            <span>7838392800</span>
+                        </div>
+                    </div></li>
+                    <li><div class="btn">
+                        <button>Login</button>
+                    </div></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="search-play">
+            <div class="search">
+                <div class="search-1">
+                    <input type="search" id="search-box" placeholder="Search">
+                    <label for="search-box" class="fas fa-search"></label>
+                </div>
+            </div>
+            <div class="popular">
+                <h5>Popular Services</h5>
+            </div>
+            <div class="buttons">
+                <ul>
+                    <li><button> private limited company registrations</button></li>
+                    <li><button>FSSAI License</button></li>
+                    <li><button>GST Registration</button></li>
+                    <li><button>MSME Registration</button></li>
+                    <li><button>IEC Registration</button></li>
+                    <li><button>ISO Registration</button></li>
+                    <li><button>Trademark registration</button></li>
+                    <li><button>Trademark assignment</button></li>
+                    <li><button>PSARA License</button></li>
+                    <li><button>RERA Registration</button></li>
+                    <li><button>RERA Registration for promoters</button></li>
+                    <li><button>plastic waste processors authorisation</button></li>
+                    <li><button>TSDF Facility services</button></li>
+                    <li><button>authorization for export of Ewaste</button></li>
+                    <li><button>EPR post compliance -  plastic waste</button></li>
+                </ul>
+            </div>
+            <div class="google-play">
+                <div class="google">
+                    <img src="./assets/images/google.svg" alt="">
+                    <p>4.5 of 5</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="play">
+                    <img src="./assets/images/playstore.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script src="./styles/subaa.js"></script>
+</body>
+</html>
