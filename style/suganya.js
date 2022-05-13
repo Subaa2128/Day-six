@@ -1,3 +1,5 @@
+// navbar shadow
+
 $(window).on("scroll", function () {
   if ($(window).scrollTop()) {
     $(".navbar_brand").addClass("shadow");
@@ -18,6 +20,7 @@ function closeMenu() {
   bar.style.display = "none";
 }
 
+// type runing
 let i = 0;
 let placeholder = "";
 const txt = [
