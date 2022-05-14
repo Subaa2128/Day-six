@@ -81,10 +81,15 @@
 .navbar_brand .navbar .btn button {
   background-color: #1b3b6f;
   color: #ffffff;
+  -webkit-box-shadow: inset 0 0 0 0 #ff7d00;
+          box-shadow: inset 0 0 0 0 #ff7d00;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
 }
 
 .navbar_brand .navbar .btn button:hover {
-  background: #fca311;
+  -webkit-box-shadow: inset 100px 0 0 0 #ff7d00;
+          box-shadow: inset 100px 0 0 0 #ff7d00;
 }
 
 .navbar_brand .navbar .drop {
@@ -232,6 +237,7 @@
   -webkit-transform: translate(0, 180%);
           transform: translate(0, 180%);
   margin: 0 200px;
+  position: relative;
 }
 
 @media (max-width: 900px) {
@@ -313,6 +319,10 @@
   padding: 6px;
 }
 
+.search_bar .content ul li p:hover {
+  background: red;
+}
+
 .search_bar .moblie_app {
   width: 100%;
   position: absolute;
@@ -320,8 +330,8 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -webkit-transform: translate(0, 380%);
-          transform: translate(0, 380%);
+  -webkit-transform: translate(0, 300%);
+          transform: translate(0, 300%);
 }
 
 .search_bar .moblie_app .google {
@@ -353,6 +363,18 @@
   display: block;
 }
 
+.search_bar .moblie_app .google_play p {
+  font-size: 14px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  margin: 0 5px -18px 50px;
+}
+
+.search_bar .moblie_app .google_play img {
+  width: 35%;
+  height: 100%;
+}
+
 @media (max-width: 500px) {
   .search_bar .moblie_app {
     top: 50px;
@@ -365,11 +387,10 @@
 .card_container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  margin-bottom: 50%;
-  gap: 20px;
-  padding: 20px;
+  -ms-grid-columns: 1fr 2.5fr;
+      grid-template-columns: 1fr 2.5fr;
+  gap: 50px;
+  margin: 40px;
 }
 
 @media (max-width: 900px) {
@@ -379,16 +400,21 @@
 }
 
 .card_container .corpbiz_box {
-  border: 1px solid gray;
-  padding: 20px;
+  border: 1px solid;
+  border: none;
+  background-color: #15426d;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 50px;
 }
 
 .card_container .corpbiz_box h3 {
-  font-size: 22px;
+  font-size: 24px;
+  margin-bottom: 50px;
 }
 
 .card_container .corpbiz_box p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .card_container .animation_card {
@@ -407,31 +433,28 @@
   }
 }
 
-.card_container .animation_card .card1 {
-  border: 1px solid gray;
+.card_container .animation_card .cards {
+  padding: 30px;
+  border: 1px solid;
   margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 10px 0 black;
+          box-shadow: 0 2px 10px 0 black;
 }
 
-.card_container .animation_card .card1 img {
-  width: 50%;
+.card_container .animation_card .cards h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
-.card_container .animation_card .card2 {
-  border: 1px solid gray;
-  margin: 20px 0;
+.card_container .animation_card .cards p {
+  font-size: 18px;
 }
 
-.card_container .animation_card .card2 img {
-  width: 50%;
-}
-
-.card_container .animation_card .card3 {
-  border: 1px solid gray;
-  margin: 20px 0;
-}
-
-.card_container .animation_card .card3 img {
-  width: 50%;
+.card_container .animation_card .cards img {
+  margin-bottom: 10px;
+  width: 20%;
 }
 
 @media (max-width: 1200px) {
