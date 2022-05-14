@@ -708,7 +708,8 @@ section .business span {
 
 @media (max-width: 900px) {
   section .business {
-    font-size: 30px;
+    font-size: 28px;
+    padding: 20px;
   }
 }
 
@@ -732,26 +733,104 @@ section .working-process {
 @media (max-width: 900px) {
   section .working-process {
     display: block;
+    padding: 10px;
   }
 }
 
 section .working-process .working {
   padding-top: 70px;
+  -webkit-animation: fallinout 1.5s ease-in;
+          animation: fallinout 1.5s ease-in;
+}
+
+@-webkit-keyframes fallinout {
+  10% {
+    -webkit-transform: translateX(350%);
+            transform: translateX(350%);
+  }
+}
+
+@keyframes fallinout {
+  10% {
+    -webkit-transform: translateX(350%);
+            transform: translateX(350%);
+  }
+}
+
+@media (max-width: 900px) {
+  section .working-process .working {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 390px) {
+  section .working-process .working {
+    padding: 0 20px;
+  }
 }
 
 section .working-process .working h2 {
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+@media (max-width: 1020px) {
+  section .working-process .working h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 955px) {
+  section .working-process .working h2 {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 900px) {
+  section .working-process .working h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  section .working-process .working h2 {
+    margin-top: 30px;
+    font-size: 25px;
+  }
 }
 
 section .working-process .youtube {
   position: relative;
   justify-self: flex-end;
+  -webkit-animation: fallin 1.5s ease-in;
+          animation: fallin 1.5s ease-in;
+}
+
+@-webkit-keyframes fallin {
+  10% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
+}
+
+@keyframes fallin {
+  10% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
 }
 
 section .working-process .youtube img {
   width: 530px;
+}
+
+@media (max-width: 900px) {
+  section .working-process .youtube img {
+    width: 100%;
+    height: 50vh;
+    margin-top: 40px;
+  }
 }
 
 section .working-process .youtube .icon {
@@ -765,6 +844,48 @@ section .working-process .youtube .icon i {
   color: red;
 }
 
+@media (max-width: 900px) {
+  section .working-process .youtube .icon i {
+    -webkit-transform: translate(500%, -220%);
+            transform: translate(500%, -220%);
+  }
+}
+
+@media (max-width: 855px) {
+  section .working-process .youtube .icon i {
+    -webkit-transform: translate(450%, -220%);
+            transform: translate(450%, -220%);
+  }
+}
+
+@media (max-width: 785px) {
+  section .working-process .youtube .icon i {
+    -webkit-transform: translate(400%, -220%);
+            transform: translate(400%, -220%);
+  }
+}
+
+@media (max-width: 685px) {
+  section .working-process .youtube .icon i {
+    -webkit-transform: translate(300%, -220%);
+            transform: translate(300%, -220%);
+  }
+}
+
+@media (max-width: 530px) {
+  section .working-process .youtube .icon i {
+    -webkit-transform: translate(200%, -200%);
+            transform: translate(200%, -200%);
+  }
+}
+
+@media (max-width: 370px) {
+  section .working-process .youtube .icon i {
+    -webkit-transform: translate(130%, -200%);
+            transform: translate(130%, -200%);
+  }
+}
+
 section .working-process .youtube .icon .icons {
   position: absolute;
 }
@@ -776,12 +897,54 @@ section .working-process .youtube .icon .icons i {
   color: black;
 }
 
+@media (max-width: 900px) {
+  section .working-process .youtube .icon .icons i {
+    -webkit-transform: translate(1890%, -680%);
+            transform: translate(1890%, -680%);
+  }
+}
+
+@media (max-width: 855px) {
+  section .working-process .youtube .icon .icons i {
+    -webkit-transform: translate(1715%, -680%);
+            transform: translate(1715%, -680%);
+  }
+}
+
+@media (max-width: 785px) {
+  section .working-process .youtube .icon .icons i {
+    -webkit-transform: translate(1525%, -680%);
+            transform: translate(1525%, -680%);
+  }
+}
+
+@media (max-width: 685px) {
+  section .working-process .youtube .icon .icons i {
+    -webkit-transform: translate(1190%, -680%);
+            transform: translate(1190%, -680%);
+  }
+}
+
+@media (max-width: 530px) {
+  section .working-process .youtube .icon .icons i {
+    -webkit-transform: translate(840%, -629%);
+            transform: translate(840%, -629%);
+  }
+}
+
+@media (max-width: 370px) {
+  section .working-process .youtube .icon .icons i {
+    -webkit-transform: translate(590%, -629%);
+            transform: translate(590%, -629%);
+  }
+}
+
 section .process {
   position: absolute;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  top: 225%;
+  margin-top: -220px;
   padding-left: 10px;
 }
 
