@@ -8,6 +8,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 
 nav{
     .header{
@@ -409,6 +412,15 @@ section{
             background-color: $blue;
             color: $white;
             padding: 100px 40px;
+            animation: bounce 1.5s ease-in;
+            @keyframes bounce {
+                10%{
+                    transform: translateY(-150%);
+                }
+            }
+            @media (max-width:900px){
+                padding: 50px 40px;
+            }
             h2{
                 padding-bottom: 50px;
                 text-transform: capitalize;
@@ -423,13 +435,20 @@ section{
                     padding: 20px;
                     margin: 10px;
                     border: 1px solid $blue;
-                    animation: pulse 4s ease-out infinite;
+                    border-radius: 5px;
+                    box-shadow: 0 5px 10px 0 $blue;
+                    animation: pulse 2s ease-in infinite;
                     @keyframes pulse{
                         10%{
-                            transform: scale(0.9);
-
+                            transform: scale(0.95);
                         }
                     }
+                    // animation: fallinout 1.5s ease-in; 
+                    // @keyframes fallinout {
+                    //     10%{
+                    //         transform: translateX(-350%);
+                    //     }
+                    // }
                     @media (max-width:580px){
                         display: block;
                         align-items: center;
@@ -439,6 +458,14 @@ section{
                         img{
                             width: 100px;
                         }
+                        @media (max-width:580px) {
+                            padding-bottom: 30px;
+                        }
+                    }
+                    .content{
+                        h2{
+                            padding-bottom: 15px;
+                        }
                     }
                 }
             }
@@ -447,6 +474,83 @@ section{
 }
 
 
+section{
+    .business{
+        padding: 0px 40px 40px;
+        font-size: 40px;
+        line-height: 1.2;
+        span{
+            color: $blue;
+        }
+        @media (max-width:900px){
+            font-size: 30px;
+        } 
+        @media (max-width:450px){
+            text-align: center;
+            padding: 10px;
+            font-size: 25px;
+        } 
+    }
+}
+
+
+section{
+    .working-process{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 70px;
+        gap: 10px;
+        @media (max-width:900px){
+            display: block;
+        }
+        .working{
+            padding-top: 70px;
+            h2{
+                font-size: 30px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }
+        .youtube{
+            position: relative;
+            justify-self: flex-end;
+            img{
+                width: 530px;
+            }
+            .icon{
+                position: absolute;
+                i{
+                    transform: translate(300%, -220%);
+                    font-size: 70px;
+                    color: red;
+                }
+                .icons{
+                    position: absolute;
+                    i{
+                        transform: translate(1190%, -680%);
+                        font-size: 30px;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    .process{
+        position: absolute;
+        writing-mode: vertical-rl;
+        top: 225%;
+        padding-left: 10px;
+        @media (max-width:900px){
+            display: none;
+        }
+        h2{
+            font-size: 40px;
+            color: rgba(104, 104, 105, 0.46);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+    }
+}
 
 
 

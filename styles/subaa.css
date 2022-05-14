@@ -14,6 +14,10 @@
           box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 nav .header {
   background: #fff;
   display: -ms-grid;
@@ -606,6 +610,28 @@ section .choose-corpiz .corpiz {
   background-color: #15426d;
   color: #fff;
   padding: 100px 40px;
+  -webkit-animation: bounce 1.5s ease-in;
+          animation: bounce 1.5s ease-in;
+}
+
+@-webkit-keyframes bounce {
+  10% {
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+  }
+}
+
+@keyframes bounce {
+  10% {
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+  }
+}
+
+@media (max-width: 900px) {
+  section .choose-corpiz .corpiz {
+    padding: 50px 40px;
+  }
 }
 
 section .choose-corpiz .corpiz h2 {
@@ -625,21 +651,24 @@ section .choose-corpiz .national-top .cards .card {
   padding: 20px;
   margin: 10px;
   border: 1px solid #15426d;
-  -webkit-animation: pulse 4s ease-out infinite;
-          animation: pulse 4s ease-out infinite;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px 0 #15426d;
+          box-shadow: 0 5px 10px 0 #15426d;
+  -webkit-animation: pulse 2s ease-in infinite;
+          animation: pulse 2s ease-in infinite;
 }
 
 @-webkit-keyframes pulse {
   10% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
   }
 }
 
 @keyframes pulse {
   10% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
   }
 }
 
@@ -655,6 +684,118 @@ section .choose-corpiz .national-top .cards .card {
 
 section .choose-corpiz .national-top .cards .card .logo img {
   width: 100px;
+}
+
+@media (max-width: 580px) {
+  section .choose-corpiz .national-top .cards .card .logo {
+    padding-bottom: 30px;
+  }
+}
+
+section .choose-corpiz .national-top .cards .card .content h2 {
+  padding-bottom: 15px;
+}
+
+section .business {
+  padding: 0px 40px 40px;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+section .business span {
+  color: #15426d;
+}
+
+@media (max-width: 900px) {
+  section .business {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  section .business {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+  }
+}
+
+section .working-process {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding-left: 70px;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  section .working-process {
+    display: block;
+  }
+}
+
+section .working-process .working {
+  padding-top: 70px;
+}
+
+section .working-process .working h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+section .working-process .youtube {
+  position: relative;
+  justify-self: flex-end;
+}
+
+section .working-process .youtube img {
+  width: 530px;
+}
+
+section .working-process .youtube .icon {
+  position: absolute;
+}
+
+section .working-process .youtube .icon i {
+  -webkit-transform: translate(300%, -220%);
+          transform: translate(300%, -220%);
+  font-size: 70px;
+  color: red;
+}
+
+section .working-process .youtube .icon .icons {
+  position: absolute;
+}
+
+section .working-process .youtube .icon .icons i {
+  -webkit-transform: translate(1190%, -680%);
+          transform: translate(1190%, -680%);
+  font-size: 30px;
+  color: black;
+}
+
+section .process {
+  position: absolute;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  top: 225%;
+  padding-left: 10px;
+}
+
+@media (max-width: 900px) {
+  section .process {
+    display: none;
+  }
+}
+
+section .process h2 {
+  font-size: 40px;
+  color: rgba(104, 104, 105, 0.46);
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 @media (max-width: 1100px) {
