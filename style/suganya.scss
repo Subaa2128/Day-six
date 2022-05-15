@@ -26,20 +26,62 @@
   padding: 10px 30px;
   .logo img {
     width: 65%;
+    @media (max-width: 900px) {
+      width: 75%;
+    }
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
   }
   .open_menu {
     display: none;
+    @media (max-width: 1200px) {
+      display: inline;
+      justify-self: end;
+      cursor: pointer;
+      display: flex;
+      i {
+        font-size: 35px;
+      }
+    }
   }
   .close_menu {
     display: none;
+    @media (max-width: 1200px) {
+      font-size: 35px;
+      margin-left: 40px;
+      cursor: pointer;
+      color: #ffffff;
+      display: flex;
+    }
   }
 
   .navbar {
     margin-top: 15px;
+    @media (max-width: 1200px) {
+      display: none;
+      position: fixed;
+      right: 0;
+      width: 70%;
+      height: 100vh;
+      margin-top: 0;
+      top: 0;
+      background-color: #15426d;
+      padding: 15px 0;
+    }
     ul {
       list-style: none;
       @include collaborate;
+      @media (max-width: 1200px) {
+        display: block;
+      }
       li {
+        @media (max-width: 1200px) {
+          @include collaborate;
+          align-items: center;
+          padding: 15px;
+          color: #ffffff;
+        }
         &:hover {
           .drop {
             display: block;
@@ -51,6 +93,10 @@
           position: relative;
           font-size: 20px;
           font-weight: bold;
+          @media (max-width: 1200px) {
+            color: #ffffff;
+            font-weight: bold;
+          }
         }
         .fa-caret-down {
           font-size: 15px;
@@ -68,6 +114,17 @@
         &:hover {
           box-shadow: inset 100px 0 0 0 #ff7d00;
         }
+        // @media (max-width: 1200px) {
+        //   // box-shadow: inset 0 0 0 0 #ff7d00;
+        //   background: #ff7d00;
+        //   box-shadow: none;
+
+        //   // transition: ease-out 0.8s;
+        //   &:hover {
+        //     background: #15426d;
+        //     // box-shadow: inset 100px 0 0 0 #ff7d00;
+        //   }
+        // }
       }
     }
 
@@ -80,6 +137,13 @@
       background-color: $white;
       width: 300px;
       border-radius: 5px;
+      @media (max-width: 1200px) {
+        width: 100%;
+        position: relative;
+        opacity: 1;
+        left: 0;
+        width: 100%;
+      }
       .drop_down:hover {
         border-left: 3px solid $blue;
         background-color: $orange;
@@ -106,22 +170,38 @@
       font-weight: bold;
       color: $whatsapp;
       font-size: 27px;
+      @media (max-width: 1200px) {
+        color: #ffffff;
+        font-size: 30px;
+      }
 
       p {
         color: $gray;
         font-size: 20px;
         margin-top: 5px;
+        @media (max-width: 1200px) {
+          color: #ffffff;
+          font-weight: normal;
+        }
       }
     }
     .fa-phone {
       color: $blue;
       font-size: 24px;
       font-weight: bold;
+      @media (max-width: 1200px) {
+        color: #ffffff;
+        font-size: 30px;
+      }
 
       p {
         color: $gray;
         font-size: 20px;
         margin-top: 6px;
+        @media (max-width: 1200px) {
+          color: #ffffff;
+          font-weight: normal;
+        }
       }
     }
     .fa-play {
@@ -139,12 +219,15 @@
   position: relative;
   margin-top: 5rem;
   height: 100vh;
+  @media (max-width: 900px) {
+    background-image: url(/asset/images/background_img.png);
+    width: 100%;
+  }
 
   .search_box {
     position: absolute;
     border: 0.5px solid $light_blue;
-    display: flex;
-    justify-content: space-between;
+    @include collaborate;
     align-items: center;
     gap: 0.1em;
     padding: 0 1em;
@@ -153,6 +236,12 @@
     margin-top: 110px;
     transform: translate(57%, 50%);
     border-radius: 5px;
+    @media (max-width: 900px) {
+      background-color: $white;
+      width: 90%;
+      transform: translate(4%, -70%);
+      height: 50px;
+    }
     &:hover {
       color: $blue;
       cursor: pointer;
@@ -169,13 +258,13 @@
   }
 
   .popular {
-    text-align: center;
+    @include center;
     position: absolute;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     transform: translate(0, 700%);
-
+    @media (max-width: 900px) {
+      display: none;
+    }
     h5 {
       font-size: 21px;
       color: #3d5a80;
@@ -215,8 +304,7 @@
 
     ul {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      @include center;
       list-style: none;
       flex-wrap: wrap;
       margin: inherit;
@@ -229,7 +317,6 @@
           border-radius: 10px;
           margin: 4px 7px;
           padding: 6px;
-          // transition: 1s all ease;
           &:hover {
             background: red;
           }
@@ -243,19 +330,38 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     transform: translate(0, 300%);
+    @media (max-width: 900px) {
+      // margin-top: -70px;
+      transform: translate(0, 60%);
+      display: inline-block;
+      text-align: center;
+    }
     .google {
       display: flex;
       align-items: center;
       justify-self: flex-end;
       gap: 10px;
+      @media (max-width: 900px) {
+        justify-content: center;
+        justify-self: flex-end;
+        margin-bottom: 20px;
+      }
       img {
         width: 30px;
+        @media (max-width: 900px) {
+          width: 40px;
+        }
       }
     }
     .stars {
       display: flex;
       align-items: center;
       color: #ff7d00;
+      @media (max-width: 900px) {
+        display: flex;
+        align-items: center;
+        color: #ff7d00;
+      }
     }
     .google_play {
       display: block;
@@ -264,29 +370,45 @@
         letter-spacing: -1px;
         font-weight: bold;
         margin: 0 5px -18px 50px;
-        // margin-left: 50px;
-        // margin-bottom: -18px;
+        @media (max-width: 900px) {
+          font-size: 30px;
+          margin-left: 10px;
+          margin-bottom: -40px;
+        }
       }
       img {
         width: 35%;
         height: 100%;
+        @media (max-width: 900px) {
+          width: 75%;
+        }
       }
     }
-    @media (max-width: 500px) {
-      top: 50px;
-      .google_play {
-        margin-top: 30px;
-      }
-    }
+    // @media (max-width: 500px) {
+    //   top: -30px;
+    //   .google_play {
+    //     margin-top: 30px;
+    //     img {
+    //       width: 90%;
+    //     }
+    //     p {
+    //       font-size: 22px;
+    //       margin-left: 10px;
+    //       margin-bottom: -30px;
+    //       letter-spacing: -1px;
+    //     }
+    //   }
+    // }
+    // @media (max-width: 600px) {
+    //   top: 60px;
+    // }
   }
 }
 
 .card_container {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
-  // margin-bottom: 50%;
   gap: 50px;
-
   margin: 40px;
   @media (max-width: 900px) {
     display: block;
@@ -298,7 +420,6 @@
     border-radius: 10px;
     color: #ffffff;
     padding: 50px;
-    // text-align: justify;
     h3 {
       font-size: 24px;
       // font-family: ;
@@ -324,6 +445,12 @@
       border: none;
       border-radius: 5px;
       box-shadow: 0 2px 10px 0 rgb(0, 0, 0.3);
+      animation: pulse 4s ease-out infinite;
+      @keyframes pulse {
+        10% {
+          transform: scale(0.6);
+        }
+      }
       h2 {
         font-size: 22px;
         margin-bottom: 20px;
@@ -339,126 +466,125 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .navbar_brand {
-    .logo {
-      width: 145%;
-    }
-    .open_menu {
-      display: inline;
-      justify-self: end;
-      cursor: pointer;
+// @media (max-width: 1200px) {
+// .navbar_brand {
+// .logo {
+//   width: 145%;
+// }
+// .open_menu {
+//   display: inline;
+//   justify-self: end;
+//   cursor: pointer;
 
-      i {
-        font-size: 40px;
-      }
-    }
-    .close_menu {
-      font-size: 35px;
-      margin-left: 40px;
-      cursor: pointer;
-      color: #ffffff;
-    }
-    .navbar {
-      display: none;
-      position: fixed;
-      right: 0;
-      width: 70%;
-      height: 100vh;
-      margin-top: 0;
-      top: 0;
-      background-color: #15426d;
-      // z-index: 1000;
-      padding: 15px 0;
-      ul {
-        display: block;
+//   i {
+//     font-size: 35px;
+//   }
+// }
+// .close_menu {
+//   font-size: 35px;
+//   margin-left: 40px;
+//   cursor: pointer;
+//   color: #ffffff;
+// }
+// .navbar {
+//   display: none;
+//   position: fixed;
+//   right: 0;
+//   width: 70%;
+//   height: 100vh;
+//   margin-top: 0;
+//   top: 0;
+//   background-color: #15426d;
+//   // z-index: 1000;
+//   padding: 15px 0;
+// ul {
+//   display: block;
 
-        li {
-          @include collaborate;
-          align-items: center;
-          padding: 15px;
-          color: #ffffff;
-          a {
-            color: #ffffff;
-            font-weight: normal;
-          }
-          .drop {
-            width: 100%;
-            position: relative;
-            opacity: 1;
-            left: 0;
-            width: 100%;
-          }
-        }
-      }
-      .fa-whatsapp {
-        color: #ffffff;
-        font-size: 30px;
-        p {
-          color: #ffffff;
-          font-weight: normal;
-        }
-      }
-      .fa-phone {
-        color: #ffffff;
-        font-size: 30px;
-        p {
-          color: #ffffff;
-          font-weight: normal;
-        }
-      }
-      .btn {
-        button {
-          background-color: #ff9f1c;
-          &:hover {
-            background: #1b3b6f;
-          }
-        }
-      }
-    }
-    .open_menu,
-    .close_menu {
-      display: flex;
-    }
-  }
-}
-@media (max-width: 900px) {
-  .search_bar {
-    background-image: url(/asset/images/background_img.png);
-    width: 100%;
-    .popular {
-      display: none;
-    }
-    .search_box {
-      background-color: $white;
-      width: 90%;
-      transform: translate(4%, -70%);
-      justify-content: space-evenly;
-      height: 50px;
-    }
-    .moblie_app {
-      transform: translate(0, 90%);
-      display: inline-block;
-      // gap: 1em;
-      text-align: center;
-    }
-    .google {
-      justify-content: center;
-      justify-self: flex-end;
-      margin-bottom: 20px;
-      img {
-        width: 40px;
-      }
-      .stars {
-        display: flex;
-        align-items: center;
-        color: #ff7d00;
-      }
-    }
-    .google_play {
-      img {
-        width: 75%;
-      }
-    }
-  }
-}
+//   li {
+//     @include collaborate;
+//     align-items: center;
+//     padding: 15px;
+//     color: #ffffff;
+//     a {
+//       color: #ffffff;
+//       font-weight: normal;
+//     }
+//     .drop {
+//       width: 100%;
+//       position: relative;
+//       opacity: 1;
+//       left: 0;
+//       width: 100%;
+//     }
+//   }
+// }
+// .fa-whatsapp {
+//   color: #ffffff;
+//   font-size: 30px;
+//   p {
+//     color: #ffffff;
+//     font-weight: normal;
+//   }
+// }
+// .fa-phone {
+//   color: #ffffff;
+//   font-size: 30px;
+//   p {
+//     color: #ffffff;
+//     font-weight: normal;
+//   }
+// }
+//   .btn {
+//     button {
+//       background-color: #ff9f1c;
+//       &:hover {
+//         background: #1b3b6f;
+//       }
+//     }
+//   }
+// }
+//   .open_menu,
+//   .close_menu {
+//     display: flex;
+//   }
+// }
+// }
+// @media (max-width: 900px) {
+//   .search_bar {
+// background-image: url(/asset/images/background_img.png);
+// width: 100%;
+// .popular {
+// display: none;
+// }
+// .search_box {
+//   background-color: $white;
+//   width: 90%;
+//   transform: translate(4%, -70%);
+//   // justify-content: space-evenly;
+//   height: 50px;
+// }
+// .moblie_app {
+//   transform: translate(0, 90%);
+//   display: inline-block;
+//   text-align: center;
+// }
+// .google {
+//   justify-content: center;
+//   justify-self: flex-end;
+//   margin-bottom: 20px;
+//   img {
+//     width: 40px;
+//   }
+//   .stars {
+//     display: flex;
+//     align-items: center;
+//     color: #ff7d00;
+//   }
+// }
+//     .google_play {
+//       img {
+//         width: 75%;
+//       }
+//     }
+//   }
+// }
