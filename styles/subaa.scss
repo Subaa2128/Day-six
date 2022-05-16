@@ -855,7 +855,7 @@ section{
                     transform: translate(150%, -82%);
                 }
                 @media (max-width:1350px){
-                    transform: translate(130%, -82%);
+                    transform: translate(125%, -82%);
                 }
                 @media (max-width:1250px){
                     transform: translate(100%, -82%);
@@ -881,7 +881,22 @@ section{
 }
 
 
-
+section{
+    .network-paterns{
+        .network{
+            text-align: center;
+            margin-top: 50px;
+            text-transform: capitalize;
+        }
+        .logos{
+            .logo{
+                img{
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
 
 
 

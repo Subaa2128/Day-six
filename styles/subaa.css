@@ -1316,8 +1316,8 @@ section .app-corpiz .app img {
 
 @media (max-width: 1350px) {
   section .app-corpiz .app img {
-    -webkit-transform: translate(130%, -82%);
-            transform: translate(130%, -82%);
+    -webkit-transform: translate(125%, -82%);
+            transform: translate(125%, -82%);
   }
 }
 
@@ -1360,6 +1360,16 @@ section .app-corpiz .app img {
   section .app-corpiz .app img {
     display: none;
   }
+}
+
+section .network-paterns .network {
+  text-align: center;
+  margin-top: 50px;
+  text-transform: capitalize;
+}
+
+section .network-paterns .logos .logo img {
+  width: 100px;
 }
 
 @media (max-width: 1100px) {
