@@ -700,6 +700,22 @@ section .business {
   padding: 0px 40px 40px;
   font-size: 40px;
   line-height: 1.2;
+  -webkit-animation: fallout 1.5s ease-in;
+          animation: fallout 1.5s ease-in;
+}
+
+@-webkit-keyframes fallout {
+  10% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
+}
+
+@keyframes fallout {
+  10% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
 }
 
 section .business span {
@@ -940,12 +956,18 @@ section .working-process .youtube .icon .icons i {
 }
 
 section .process {
+  margin-top: -230px;
   position: absolute;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  margin-top: -220px;
-  padding-left: 10px;
+}
+
+section .process h2 {
+  font-size: 40px;
+  color: rgba(104, 104, 105, 0.46);
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 @media (max-width: 900px) {
@@ -954,11 +976,142 @@ section .process {
   }
 }
 
-section .process h2 {
+section .services {
+  background-image: url(../assets/images/background-services.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  padding: 50px 10px 50px 50px;
+  margin-top: -4px;
+}
+
+@media (max-width: 950px) {
+  section .services {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  section .services {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 450px) {
+  section .services {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 330px) {
+  section .services {
+    padding: 5px;
+  }
+}
+
+section .services .business-registration {
+  margin-top: 5px;
+}
+
+section .services .business-registration ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+section .services .business-registration ul li {
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #13233e;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+section .services .business-registration ul li p {
+  background-color: #fff;
+  color: #000;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+section .services .registration .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 900px) {
+  section .services .registration .cards {
+    display: block;
+  }
+}
+
+section .services .registration .cards .card {
+  text-align: center;
+  background-color: #fff;
+  margin: 10px 5px;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+section .services .registration .cards .card img {
+  width: 70px;
+  padding-bottom: 20px;
+}
+
+section .services .registration .cards .card h2 {
+  padding-bottom: 20px;
+  text-transform: capitalize;
+}
+
+section .services .registration .cards .card p {
+  padding-bottom: 20px;
+}
+
+section .services .registration .cards .card button {
+  background-color: #efa434;
+  width: 200px;
+  padding: 10px 30px;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+section .services .registration .cards .card button:hover {
+  background: #13233e;
+  color: #fff;
+}
+
+section .service {
+  margin-top: -330px;
+  position: absolute;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+section .service h2 {
   font-size: 40px;
   color: rgba(104, 104, 105, 0.46);
   text-transform: uppercase;
   letter-spacing: 5px;
+}
+
+@media (max-width: 950px) {
+  section .service {
+    margin-top: -550px;
+  }
+}
+
+@media (max-width: 900px) {
+  section .service {
+    display: none;
+  }
 }
 
 @media (max-width: 1100px) {
