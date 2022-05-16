@@ -412,10 +412,10 @@ section{
             background-color: $blue;
             color: $white;
             padding: 100px 40px;
-            animation: bounce 1.5s ease-in;
-            @keyframes bounce {
+            animation: bouncein 1.5s ease-in;
+            @keyframes bouncein {
                 10%{
-                    transform: translateY(-150%);
+                    transform: translateX(-350%);
                 }
             }
             @media (max-width:900px){
@@ -635,6 +635,12 @@ section{
         grid-template-columns: 1fr 3fr;
         padding: 50px 10px 50px 50px;
         margin-top: -4px;
+        animation: bounce 1.5s ease-in; 
+        @keyframes bounce {
+            10%{
+                transform: translateY(350%);
+            }
+        }
         @media (max-width:950px){
             display: block;
         }
@@ -648,7 +654,7 @@ section{
             padding: 5px;
         }
         .business-registration{
-            margin-top: 5px;
+            margin-top: 18px;
             ul{
                 text-decoration: none;
                 list-style: none;
@@ -712,6 +718,12 @@ section{
     .service{
         margin-top: -330px;
         @include vertical;
+        animation: bounce 1.5s ease-in; 
+        @keyframes bounce {
+            10%{
+                transform: translateY(350%);
+            }
+        }
         @media (max-width:950px){
             margin-top: -550px;
         }
@@ -723,8 +735,98 @@ section{
 
 
 
+section{
+    .application{
+        background-image: url(../assets/images/background-lap.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        .app-forms{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-transform: capitalize;
+            animation: rubberband 1s;
+            @keyframes rubberband {
+                75%{
+                    transform: scale3d(-1.25,.75,1);
+                }
+            }
+            @media (max-width:900px){
+                display: block;
+            }
+            .forms:not(:last-of-type){
+                border-right: 1px solid $white;
+                @media (max-width:900px){
+                    border-right: 0;
+                    border-bottom: 1px solid $white;
+                }
+
+            }
+            .forms{
+                padding: 50px 20px;
+                
+                &:hover{
+                    background-image: url(../assets/images/bg-approach.jpg);
+                    box-shadow: 0 15px 250px 20px $blue;  
+                }
+                .form{
+                    justify-self: center;
+                    color: $white;
+                    text-align: center;
+                    img{
+                        width: 70px;
+                        margin-bottom: 20px;
+                    }
+                    h4{
+                        font-size: 25px;
+                        @media (max-width:900px){
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
+
+section{
+    .app-corpiz{
+        background-image: url(../assets/images/mobile-app-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100% ;
+        position: relative;
+        padding: 84px 40px;
+        margin-top: 6rem;
+        margin-left: 15px;
+        width: 97%;
+        max-height: 100vh;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .corpiz{
+            h2{
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+            p{
+                margin-bottom: 20px;
+                line-height: 30px;
+            }
+            img{
+                width: 200px;
+            }
+        }
+        .app{
+            position: absolute;
+            transform: translate(127%, -16%);
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
 
 
 
