@@ -666,6 +666,10 @@ h2 {
   padding: 1em;
   border-radius: 12px;
   cursor: pointer;
+  -webkit-box-shadow: 0 0 20px 0.1px #4e4e50;
+          box-shadow: 0 0 20px 0.1px #4e4e50;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .article-list .square .fa-user-graduate {
@@ -693,6 +697,13 @@ h2 {
   background-color: #e85a4f;
   color: white;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.article-list .square button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .article-list .square h3 {
@@ -724,6 +735,13 @@ h2 {
   border: none;
   background-color: #4e4e50;
   color: #e85a4f;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.read button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .bottom-bar {
@@ -917,6 +935,155 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media (max-width: 850px) {
+  .blog {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 1em;
+    width: 100%;
+    gap: 20px;
+  }
+  .blog .corpbiz {
+    width: 100%;
+  }
+  .blog .blog-box1 {
+    width: 100%;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .faith h1 {
+    padding: 15px;
+  }
+  .iframe-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .service-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+    margin-top: 100px;
+  }
+  .service-container .service-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .service-container .registration-box {
+    padding: 10px;
+    margin: 0;
+  }
+  .service-container .registration-box p {
+    margin-bottom: 20px;
+  }
+  .user-info {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    height: auto;
+  }
+  .user-info .user-list {
+    padding: 3em 0;
+  }
+  .container-list .slider-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .container-list .slider-container .slides {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .article-list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 20px;
+  }
+  .read {
+    margin-top: 30px;
+  }
+  .bottom-bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .footer-container .footer-list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .search-bar {
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+  }
+  .hero-list {
+    display: none;
+  }
+  .iframe-container .text-list .working-process {
+    padding: 10px;
+  }
+  .iframe-container .text-list .vertical-text {
+    padding: 10px;
+  }
+  .iframe-container .iframe {
+    display: none;
+  }
+  .footer-container .footer-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    padding: 2em;
+  }
+  .bottom-bar {
+    height: 200px;
+  }
+  .bottom-bar h1 {
+    font-size: 20px;
+  }
+  .bottom-bar .int {
+    width: 70%;
+  }
+  .bottom-bar button {
+    margin-top: 10px;
+    border-radius: 11px;
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .topbar .logo img {
+    width: 100px;
+    height: 40px;
   }
 }
 /*# sourceMappingURL=kowshik.css.map */
