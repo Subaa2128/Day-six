@@ -914,6 +914,7 @@ section{
     .latest-news{
         display: flex;
         flex-wrap: wrap;
+        padding-bottom: 50px;
         @media (max-width:850px) {
             display: block;
         }
@@ -1075,6 +1076,167 @@ section{
 }
 
 
+
+section{
+    .article-card{
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 50px;
+            gap: 30px;
+            .card:nth-child(1){
+                background-image: url(../assets/images/card-2.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center ;
+                overflow: hidden;
+                transition: 0.1s;
+                &:hover{
+                    transform: translateY(-70px);
+                    box-shadow: 10px 20px 15px 1px $blue;
+                }
+                .info{
+                    background-color: $card-bg;
+                    .header{
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        padding: 10px 8px;
+                        color: $white;
+                        border-bottom: 1px solid $orange;
+                        img{
+                            width: 40px;
+                            border-radius: 50%;
+                            border: 2.5px solid $border; 
+                        }
+                        h3{
+                            font-size: 15px;
+                        }
+                        h4{
+                            font-size: 15px;
+                        }
+                        p{
+                            font-size: 10px;
+                        }
+                    }
+                    .content{
+                        text-transform: capitalize;
+                        margin-top: 100px;
+                        padding-left: 20px;
+                        button{
+                            border: none;
+                            background-color: $orange;
+                            width: 40%;
+                            padding: 5px 20px;
+                            color: $white;
+                            border-radius: 4px;
+                        }
+                        h1{
+                            font-size: 20px;
+                            color: $white;
+                            margin: 20px 0;
+                        }
+                        p{
+                            padding-bottom: 20px;
+                            color: $orange;
+                            font-weight: bold;
+                            position: relative;
+                        }
+                        p::after{
+                            content: '';
+                            position: absolute;
+                            background-color: $orange;
+                            height: 3px;
+                            width: 0;
+                            left: 0;
+                            bottom: 10px;
+                            transition: 0.3s;
+                        }
+                        p:hover:after{
+                            width: 40%;
+                        }
+                    }
+                }
+                span{
+                    transition: 0.5s;
+                }
+                span:nth-child(1){
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 7px;
+                    background: linear-gradient(to right, transparent, $orange);
+                    animation: animate1 2s linear infinite;
+                    @keyframes animate1 {
+                        0%{
+                            transform: translateX(-100%);
+                        }
+                        100%{
+                            transform: translateX(100%);
+                        }
+                    }
+                }
+                span:nth-child(2){
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 7px;
+                    height: 100%;
+                    background: linear-gradient(to bottom, transparent, #1779ff);
+                    animation: animate2 2s linear infinite;
+                    animation-delay: 1s;
+                    @keyframes animate2 {
+                        0%{
+                            transform: translateY(-100%);
+                        }
+                        100%{
+                            transform: translateY(100%);
+                        }
+                    }
+                }
+                span:nth-child(3){
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 7px;
+                    background: linear-gradient(to left, transparent, $orange);
+                    animation: animate3 2s linear infinite;
+                    @keyframes animate3 {
+                        0%{
+                            transform: translateX(100%);
+                        }
+                        100%{
+                            transform: translateX(-100%);
+                        }
+                    }
+                }
+                span:nth-child(4){
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 7px;
+                    height: 100%;
+                    background: linear-gradient(to top, transparent, #1779ff);
+                    animation: animate4 2s linear infinite;
+                    animation-delay: 1s;
+                    @keyframes animate4 {
+                        0%{
+                            transform: translateY(100%);
+                        }
+                        100%{
+                            transform: translateY(-100%);
+                        }
+                    }
+                }
+            }
+            .card:nth-child(2){
+                background-image: url(../assets/images/card-1.jpg);
+            }
+        }
+    }
+}
 
 
 

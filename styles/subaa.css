@@ -1401,6 +1401,7 @@ section .latest-news {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 50px;
 }
 
 @media (max-width: 850px) {
@@ -1649,6 +1650,262 @@ section .latest-news .news .slider .slick-dots li button {
 
 section .latest-news .news .slider .slick-dots .slick-active button {
   background-color: #15426d;
+}
+
+section .article-card .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  margin: 50px;
+  gap: 30px;
+}
+
+section .article-card .cards .card:nth-child(1) {
+  background-image: url(../assets/images/card-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+section .article-card .cards .card:nth-child(1):hover {
+  -webkit-transform: translateY(-70px);
+          transform: translateY(-70px);
+  -webkit-box-shadow: 10px 20px 15px 1px #15426d;
+          box-shadow: 10px 20px 15px 1px #15426d;
+}
+
+section .article-card .cards .card:nth-child(1) .info {
+  background-color: rgba(2, 36, 70, 0.87);
+}
+
+section .article-card .cards .card:nth-child(1) .info .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 8px;
+  color: #fff;
+  border-bottom: 1px solid #efa434;
+}
+
+section .article-card .cards .card:nth-child(1) .info .header img {
+  width: 40px;
+  border-radius: 50%;
+  border: 2.5px solid #e6e6e6;
+}
+
+section .article-card .cards .card:nth-child(1) .info .header h3 {
+  font-size: 15px;
+}
+
+section .article-card .cards .card:nth-child(1) .info .header h4 {
+  font-size: 15px;
+}
+
+section .article-card .cards .card:nth-child(1) .info .header p {
+  font-size: 10px;
+}
+
+section .article-card .cards .card:nth-child(1) .info .content {
+  text-transform: capitalize;
+  margin-top: 100px;
+  padding-left: 20px;
+}
+
+section .article-card .cards .card:nth-child(1) .info .content button {
+  border: none;
+  background-color: #efa434;
+  width: 40%;
+  padding: 5px 20px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+section .article-card .cards .card:nth-child(1) .info .content h1 {
+  font-size: 20px;
+  color: #fff;
+  margin: 20px 0;
+}
+
+section .article-card .cards .card:nth-child(1) .info .content p {
+  padding-bottom: 20px;
+  color: #efa434;
+  font-weight: bold;
+  position: relative;
+}
+
+section .article-card .cards .card:nth-child(1) .info .content p::after {
+  content: '';
+  position: absolute;
+  background-color: #efa434;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+section .article-card .cards .card:nth-child(1) .info .content p:hover:after {
+  width: 40%;
+}
+
+section .article-card .cards .card:nth-child(1) span {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section .article-card .cards .card:nth-child(1) span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#efa434));
+  background: linear-gradient(to right, transparent, #efa434);
+  -webkit-animation: animate1 2s linear infinite;
+          animation: animate1 2s linear infinite;
+}
+
+@-webkit-keyframes animate1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+section .article-card .cards .card:nth-child(1) span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#1779ff));
+  background: linear-gradient(to bottom, transparent, #1779ff);
+  -webkit-animation: animate2 2s linear infinite;
+          animation: animate2 2s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+section .article-card .cards .card:nth-child(1) span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#efa434));
+  background: linear-gradient(to left, transparent, #efa434);
+  -webkit-animation: animate3 2s linear infinite;
+          animation: animate3 2s linear infinite;
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+section .article-card .cards .card:nth-child(1) span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#1779ff));
+  background: linear-gradient(to top, transparent, #1779ff);
+  -webkit-animation: animate4 2s linear infinite;
+          animation: animate4 2s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes animate4 {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+section .article-card .cards .card:nth-child(2) {
+  background-image: url(../assets/images/card-1.jpg);
 }
 
 @media (max-width: 1100px) {
