@@ -2060,7 +2060,15 @@ section .newsletter .email button {
 
 section .footer {
   background-image: url(../assets/images/background-services.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 70px 70px 10px;
+}
+
+@media (max-width: 785px) {
+  section .footer {
+    padding: 50px 30px 10px;
+  }
 }
 
 section .footer .footer-flex {
@@ -2068,6 +2076,12 @@ section .footer .footer-flex {
   display: -ms-flexbox;
   display: flex;
   gap: 40px;
+}
+
+@media (max-width: 950px) {
+  section .footer .footer-flex {
+    display: block;
+  }
 }
 
 section .footer .footer-flex .flex h1 {
@@ -2082,6 +2096,7 @@ section .footer .footer-flex .flex ul {
   text-decoration: none;
   text-transform: capitalize;
   padding-bottom: 30px;
+  font-size: 14px;
 }
 
 section .footer .footer-flex .flex ul li {
@@ -2126,8 +2141,26 @@ section .footer .bottom ul {
   font-size: 14px;
 }
 
+@media (max-width: 950px) {
+  section .footer .bottom ul {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 705px) {
+  section .footer .bottom ul {
+    display: block;
+  }
+}
+
 section .footer .bottom ul li:hover {
   color: #efa434;
+}
+
+@media (max-width: 705px) {
+  section .footer .bottom ul li {
+    padding-bottom: 10px;
+  }
 }
 
 section .footer .copyright {
