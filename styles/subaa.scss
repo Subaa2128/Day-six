@@ -1084,7 +1084,37 @@ section{
             grid-template-columns: repeat(4, 1fr);
             margin: 50px;
             gap: 30px;
-            .card:nth-child(1){
+            @media (max-width:1000px) {
+                display: inline-block; 
+                margin-left: 120px;
+                width: 75%;
+            }
+            @media (max-width:750px) {
+                margin-left: 90px;
+            }
+            @media (max-width:600px) {
+                margin: 0 10px;
+                width: 97%;
+            }
+            @media (max-width:500px) {
+                margin-left: 5px;
+            }
+            .card:nth-child(2){
+                background-image: url(../assets/images/card-3.jpg);
+                @media (max-width:1000px) {
+                    margin: 20px 0; 
+                }
+            }
+            .card:nth-child(3){
+                background-image: url(../assets/images/card-4.jpg);
+            }
+            .card:nth-child(4){
+                background-image: url(../assets/images/card-1.jpg);
+                @media (max-width:1000px) {
+                    margin: 20px 0; 
+                }
+            }
+            .card{
                 background-image: url(../assets/images/card-2.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -1092,18 +1122,25 @@ section{
                 overflow: hidden;
                 transition: 0.1s;
                 &:hover{
-                    transform: translateY(-70px);
+                    transform: scale(1.1);
                     box-shadow: 10px 20px 15px 1px $blue;
+                    @media (max-width:600px) {
+                        transform: scale(0.9);
+                    }
                 }
                 .info{
                     background-color: $card-bg;
                     .header{
                         display: flex;
-                        justify-content: space-evenly;
+                        flex-wrap: wrap;
                         align-items: center;
                         padding: 10px 8px;
                         color: $white;
                         border-bottom: 1px solid $orange;
+                        @media (max-width:1000px) {
+                            flex-wrap: nowrap;
+                            gap: 10px;
+                        }
                         img{
                             width: 40px;
                             border-radius: 50%;
@@ -1123,10 +1160,10 @@ section{
                         text-transform: capitalize;
                         margin-top: 100px;
                         padding-left: 20px;
+                        // background-color: $card-bg;
                         button{
                             border: none;
                             background-color: $orange;
-                            width: 40%;
                             padding: 5px 20px;
                             color: $white;
                             border-radius: 4px;
@@ -1231,8 +1268,79 @@ section{
                     }
                 }
             }
-            .card:nth-child(2){
-                background-image: url(../assets/images/card-1.jpg);
+        }
+    }
+}
+
+
+
+section{
+    .button{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        button{
+            text-transform: capitalize;
+            border: none;
+            padding: 5px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: $white;
+            background-color: $dark-blue;
+            border-radius: 4px;
+            &:hover{
+                background-color: $orange;
+            }
+        }
+    }
+}
+
+
+section{
+    .newsletter{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 100px;
+        background-color: $orange;
+        @media (max-width:850px) {
+            display: block;
+            padding: 50px;
+            text-align: center;
+        }
+        @media (max-width:450px) {
+            padding: 30px 20px;
+            font-size: 15px;
+        }
+        .email{
+            position: relative;
+            @media (max-width:850px) {
+                margin-top: 30px;
+            }
+            input{
+                border: none;
+                outline: none;
+                width: 95%;
+                height: 50px;
+                padding: 0 16px;
+                border-radius: 40px;
+            }
+            button{
+                position: absolute;
+                right: 0;
+                background-color: $dark-blue;
+                color: $white;
+                padding: 14px 26px;
+                letter-spacing: 2px;
+                font-size: 20px;
+                font-weight: bold;
+                border: none;
+                border-bottom-right-radius: 40px;
+                border-top-right-radius: 40px;
+                cursor: pointer;
+                @media (max-width:850px) {
+                    padding: 17px 10px;
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -1240,8 +1348,74 @@ section{
 
 
 
-
-
+section{
+    .footer{
+        background-image: url(../assets/images/background-services.jpg);
+        padding: 70px 70px 10px;
+        .footer-flex{
+            display: flex;
+            gap: 40px;
+            .flex{
+                h1{
+                    color: $orange;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    padding-bottom: 20px;
+                }
+                ul{
+                    list-style: none;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    padding-bottom: 30px;
+                    li{
+                        color: $white;
+                        display: flex;
+                        padding-bottom: 15px;
+                        align-items: center;
+                        gap: 10px;
+                        &:hover{
+                            color: $orange;
+                        }
+                        i{
+                            background-color: $icon;
+                            color: $white;
+                            padding: 10px;
+                            &:hover{
+                                background-color: $orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bottom{
+            border-top: 1px solid $icon;
+            padding: 20px;
+            color: $white;
+            text-transform: capitalize;
+            ul{
+            display: flex;
+            list-style: none;
+            gap:30px;
+            font-size: 14px;
+            li{
+                &:hover{
+                    color: $orange;
+                }
+            }
+            }
+        }
+        .copyright{
+            border-top: 1px solid $icon;
+            padding: 20px;
+            h4{
+                text-align: center;
+                color: $white;
+                font-weight: 100;
+            }
+        }
+    }
+}
 
 
 
