@@ -799,7 +799,7 @@
   color: #5d001e;
 }
 
-.apps_wrapper {
+.swiper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -914,5 +914,13 @@
     color: #ff90b3;
     margin-top: 20px;
     text-align: center;
+  }
+}
+
+.visit_line {
+  padding: 2em;
+  font-size: 22px;
+  span {
+    color: #5d001e;
   }
 }

@@ -51,3 +51,37 @@ async function type() {
   type();
 }
 type();
+
+//swiper
+
+var swiper = new swiper(".myapps", {
+  slidesPerView: 5,
+  loop: true,
+  spaceBetween: 40,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    550: {
+      slidesPerView: 3,
+    },
+    800: {
+      slidesPerView: 4,
+    },
+    1000: {
+      slidesPerView: 5,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
