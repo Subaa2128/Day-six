@@ -1,10 +1,10 @@
-@import url(c:\Users\subaa\memo\day---six\styles\mediaquery.css);
 .button-basic, nav .header .navbar ul li .btn button {
   border-radius: 5px;
   font-size: 20px;
   font-weight: 300;
   border: none;
   padding: 5px 25px;
+  cursor: pointer;
 }
 
 * {
@@ -84,7 +84,6 @@ nav .header .navbar ul li i {
 nav .header .navbar ul li .drop {
   display: none;
   line-height: 2.7;
-  position: absolute;
   margin-top: 15px;
   background-color: #fff;
   width: 300px;
@@ -92,6 +91,7 @@ nav .header .navbar ul li .drop {
   -webkit-box-shadow: 0 2px 10px 0 #444444;
           box-shadow: 0 2px 10px 0 #444444;
   border-radius: 4px;
+  position: absolute;
 }
 
 nav .header .navbar ul li .drop .drop-down {
@@ -296,6 +296,9 @@ section .search-play .search-1 {
 
 section .search-play .search-1:hover {
   color: #efa434;
+  -webkit-box-shadow: 0 0px 5px 0px #007bff;
+          box-shadow: 0 0px 5px 0px #007bff;
+  border: none;
 }
 
 @media (max-width: 900px) {
@@ -331,8 +334,8 @@ section .search-play .popular {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  -webkit-transform: translate(0%, 600%);
-          transform: translate(0%, 600%);
+  -webkit-transform: translate(3%, 600%);
+          transform: translate(3%, 600%);
 }
 
 @media (max-width: 900px) {
@@ -360,7 +363,7 @@ section .search-play .buttons {
 
 @media (max-width: 1290px) {
   section .search-play .buttons {
-    margin: 0 150px;
+    margin: 0 140px;
   }
 }
 
@@ -372,26 +375,26 @@ section .search-play .buttons {
 
 @media (max-width: 1190px) {
   section .search-play .buttons {
-    margin: 0 120px;
+    margin: 0 100px;
   }
 }
 
 @media (max-width: 1088px) {
   section .search-play .buttons {
-    margin: 0 100px;
+    margin: 0 90px;
   }
 }
 
 @media (max-width: 1008px) {
   section .search-play .buttons {
-    margin: 0 90px;
+    margin: 0 80px;
   }
 }
 
 @media (max-width: 990px) {
   section .search-play .buttons {
-    -webkit-transform: translate(3.5%, 100%);
-            transform: translate(3.5%, 100%);
+    -webkit-transform: translate(3.5%, 80%);
+            transform: translate(3.5%, 80%);
     margin: 0 100px;
   }
 }
@@ -425,6 +428,8 @@ section .search-play .buttons ul {
 }
 
 section .search-play .buttons ul li button {
+  cursor: pointer;
+  text-transform: capitalize;
   background-color: #15426d;
   color: #fff;
   border: 1.5px solid #efa434;
@@ -643,17 +648,7 @@ section .choose-corpiz .national-top {
   display: block;
 }
 
-section .choose-corpiz .national-top .cards .card {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
-  padding: 20px;
-  margin: 10px;
-  border: 1px solid #15426d;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 5px 10px 0 #15426d;
-          box-shadow: 0 5px 10px 0 #15426d;
+section .choose-corpiz .national-top .cards {
   -webkit-animation: pulse 2s ease-in infinite;
           animation: pulse 2s ease-in infinite;
 }
@@ -669,6 +664,35 @@ section .choose-corpiz .national-top .cards .card {
   10% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
+  }
+}
+
+section .choose-corpiz .national-top .cards .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #15426d;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px 0 #15426d;
+          box-shadow: 0 5px 10px 0 #15426d;
+  -webkit-animation: fallinout 1.5s ease-in;
+          animation: fallinout 1.5s ease-in;
+}
+
+@-webkit-keyframes fallinout {
+  10% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
+}
+
+@keyframes fallinout {
+  10% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
   }
 }
 
@@ -693,6 +717,7 @@ section .choose-corpiz .national-top .cards .card .logo img {
 }
 
 section .choose-corpiz .national-top .cards .card .content h2 {
+  color: #333333;
   padding-bottom: 15px;
 }
 
@@ -700,6 +725,7 @@ section .business {
   padding: 0px 40px 40px;
   font-size: 40px;
   line-height: 1.2;
+  color: #404040;
   -webkit-animation: fallout 1.5s ease-in;
           animation: fallout 1.5s ease-in;
 }
@@ -759,13 +785,6 @@ section .working-process .working {
           animation: fallinout 1.5s ease-in;
 }
 
-@-webkit-keyframes fallinout {
-  10% {
-    -webkit-transform: translateX(350%);
-            transform: translateX(350%);
-  }
-}
-
 @keyframes fallinout {
   10% {
     -webkit-transform: translateX(350%);
@@ -786,6 +805,7 @@ section .working-process .working {
 }
 
 section .working-process .working h2 {
+  color: #404040;
   font-size: 40px;
   margin-bottom: 30px;
   text-align: center;
@@ -1038,11 +1058,16 @@ section .services .business-registration ul {
 }
 
 section .services .business-registration ul li {
+  cursor: pointer;
   text-transform: capitalize;
   color: #fff;
   background-color: #13233e;
   margin-bottom: 10px;
   padding: 10px;
+}
+
+section .services .business-registration ul li:hover {
+  background-color: #efa434;
 }
 
 section .services .business-registration ul li p {
@@ -1089,6 +1114,7 @@ section .services .registration .cards .card p {
 }
 
 section .services .registration .cards .card button {
+  cursor: pointer;
   background-color: #efa434;
   width: 200px;
   padding: 10px 30px;
@@ -1122,8 +1148,8 @@ section .service h2 {
 
 @keyframes bounce {
   10% {
-    -webkit-transform: translateY(350%);
-            transform: translateY(350%);
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
   }
 }
 
@@ -1189,12 +1215,16 @@ section .application .app-forms .forms:not(:last-of-type) {
 
 section .application .app-forms .forms {
   padding: 50px 20px;
+  -webkit-transition: 0.10s;
+  transition: 0.10s;
 }
 
 section .application .app-forms .forms:hover {
   background-image: url(../assets/images/bg-approach.jpg);
-  -webkit-box-shadow: 0 15px 250px 20px #15426d;
-          box-shadow: 0 15px 250px 20px #15426d;
+  -webkit-box-shadow: 0 0 20px 5px #15426d;
+          box-shadow: 0 0 20px 5px #15426d;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 section .application .app-forms .forms .form {
@@ -1269,6 +1299,22 @@ section .app-corpiz {
 
 section .app-corpiz .corpiz {
   padding-right: 500px;
+  -webkit-animation: up 2s;
+          animation: up 2s;
+}
+
+@-webkit-keyframes up {
+  10% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+}
+
+@keyframes up {
+  10% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
 }
 
 @media (max-width: 850px) {
@@ -1299,6 +1345,15 @@ section .app-corpiz .corpiz img {
 
 section .app-corpiz .app {
   position: absolute;
+  -webkit-animation: up 2s;
+          animation: up 2s;
+}
+
+@keyframes up {
+  10% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
 }
 
 section .app-corpiz .app img {
@@ -1367,6 +1422,7 @@ section .network-paterns .network {
   margin-top: 50px;
   text-transform: capitalize;
   font-size: 30px;
+  color: #404040;
 }
 
 section .network-paterns .logos .logo {
@@ -1414,6 +1470,15 @@ section .latest-news .star-slide {
   text-align: right;
   max-width: 50%;
   position: relative;
+  -webkit-animation: fallinout 2s ease-in;
+          animation: fallinout 2s ease-in;
+}
+
+@keyframes fallinout {
+  10% {
+    -webkit-transform: translateX(350%);
+            transform: translateX(350%);
+  }
 }
 
 @media (max-width: 850px) {
@@ -1535,11 +1600,13 @@ section .latest-news .star-slide .slick-dots {
 }
 
 section .latest-news .star-slide .slick-dots li {
+  cursor: pointer;
   list-style: none;
   margin: 5px;
 }
 
 section .latest-news .star-slide .slick-dots li button {
+  cursor: pointer;
   font-size: 0;
   padding: 1px 20px;
   background-color: #d2d2d2;
@@ -1556,6 +1623,15 @@ section .latest-news .news {
   text-align: left;
   border-left: 2px solid #efa434;
   color: #15426d;
+  -webkit-animation: fallin 2s ease-in;
+          animation: fallin 2s ease-in;
+}
+
+@keyframes fallin {
+  10% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
 }
 
 @media (max-width: 1170px) {
@@ -1586,6 +1662,7 @@ section .latest-news .news .slider .slide p {
 }
 
 section .latest-news .news .slider .slick-dots {
+  cursor: pointer;
   position: absolute;
   display: block;
   left: 50%;
@@ -1636,11 +1713,13 @@ section .latest-news .news .slider .slick-dots {
 }
 
 section .latest-news .news .slider .slick-dots li {
+  cursor: pointer;
   list-style: none;
   margin: 5px;
 }
 
 section .latest-news .news .slider .slick-dots li button {
+  cursor: pointer;
   font-size: 0;
   padding: 5px;
   border-radius: 50%;
@@ -1690,6 +1769,22 @@ section .article-card .cards {
 
 section .article-card .cards .card:nth-child(2) {
   background-image: url(../assets/images/card-3.jpg);
+  -webkit-animation: drop-2 1.5s ease-in;
+          animation: drop-2 1.5s ease-in;
+}
+
+@-webkit-keyframes drop-2 {
+  10% {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+  }
+}
+
+@keyframes drop-2 {
+  10% {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1700,10 +1795,42 @@ section .article-card .cards .card:nth-child(2) {
 
 section .article-card .cards .card:nth-child(3) {
   background-image: url(../assets/images/card-4.jpg);
+  -webkit-animation: drop-3 1.5s ease-in;
+          animation: drop-3 1.5s ease-in;
+}
+
+@-webkit-keyframes drop-3 {
+  10% {
+    -webkit-transform: translateY(300%);
+            transform: translateY(300%);
+  }
+}
+
+@keyframes drop-3 {
+  10% {
+    -webkit-transform: translateY(300%);
+            transform: translateY(300%);
+  }
 }
 
 section .article-card .cards .card:nth-child(4) {
   background-image: url(../assets/images/card-1.jpg);
+  -webkit-animation: drop-4 1.5s ease-in;
+          animation: drop-4 1.5s ease-in;
+}
+
+@-webkit-keyframes drop-4 {
+  10% {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+  }
+}
+
+@keyframes drop-4 {
+  10% {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1720,6 +1847,23 @@ section .article-card .cards .card {
   overflow: hidden;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  position: relative;
+  -webkit-animation: drop 1.5s ease-in;
+          animation: drop 1.5s ease-in;
+}
+
+@-webkit-keyframes drop {
+  10% {
+    -webkit-transform: translateY(300%);
+            transform: translateY(300%);
+  }
+}
+
+@keyframes drop {
+  10% {
+    -webkit-transform: translateY(300%);
+            transform: translateY(300%);
+  }
 }
 
 section .article-card .cards .card:hover {
@@ -1736,8 +1880,16 @@ section .article-card .cards .card:hover {
   }
 }
 
+@media (max-width: 1000px) {
+  section .article-card .cards .card:hover {
+    -webkit-box-shadow: 0px 0px 15px 5px #15426d;
+            box-shadow: 0px 0px 15px 5px #15426d;
+  }
+}
+
 section .article-card .cards .card .info {
   background-color: rgba(2, 36, 70, 0.87);
+  background-size: cover;
 }
 
 section .article-card .cards .card .info .header {
@@ -1750,6 +1902,7 @@ section .article-card .cards .card .info .header {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 8px;
+  gap: 12px;
   color: #fff;
   border-bottom: 1px solid #efa434;
 }
@@ -1777,7 +1930,14 @@ section .article-card .cards .card .info .header h4 {
 }
 
 section .article-card .cards .card .info .header p {
+  margin-left: 50px;
   font-size: 10px;
+}
+
+@media (max-width: 1000px) {
+  section .article-card .cards .card .info .header p {
+    margin-left: 0;
+  }
 }
 
 section .article-card .cards .card .info .content {
@@ -1787,6 +1947,7 @@ section .article-card .cards .card .info .content {
 }
 
 section .article-card .cards .card .info .content button {
+  cursor: pointer;
   border: none;
   background-color: #efa434;
   padding: 5px 20px;
@@ -1798,9 +1959,11 @@ section .article-card .cards .card .info .content h1 {
   font-size: 20px;
   color: #fff;
   margin: 20px 0;
+  padding-right: 20px;
 }
 
 section .article-card .cards .card .info .content p {
+  cursor: pointer;
   padding-bottom: 20px;
   color: #efa434;
   font-weight: bold;
@@ -1826,6 +1989,11 @@ section .article-card .cards .card .info .content p:hover:after {
 section .article-card .cards .card span {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  opacity: 0;
+}
+
+section .article-card .cards .card:hover span {
+  opacity: 1;
 }
 
 section .article-card .cards .card span:nth-child(1) {
@@ -1979,9 +2147,10 @@ section .button {
 }
 
 section .button button {
+  cursor: pointer;
   text-transform: capitalize;
   border: none;
-  padding: 5px 20px;
+  padding: 15px 20px;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
@@ -2084,6 +2253,25 @@ section .footer .footer-flex {
   }
 }
 
+section .footer .footer-flex .flex {
+  -webkit-animation: pop-up 1.9s ease-in;
+          animation: pop-up 1.9s ease-in;
+}
+
+@-webkit-keyframes pop-up {
+  10% {
+    -webkit-transform: translateY(350%);
+            transform: translateY(350%);
+  }
+}
+
+@keyframes pop-up {
+  10% {
+    -webkit-transform: translateY(350%);
+            transform: translateY(350%);
+  }
+}
+
 section .footer .footer-flex .flex h1 {
   color: #efa434;
   text-transform: uppercase;
@@ -2092,6 +2280,7 @@ section .footer .footer-flex .flex h1 {
 }
 
 section .footer .footer-flex .flex ul {
+  cursor: pointer;
   list-style: none;
   text-decoration: none;
   text-transform: capitalize;
@@ -2133,6 +2322,7 @@ section .footer .bottom {
 }
 
 section .footer .bottom ul {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2198,6 +2388,9 @@ section .footer .copyright h4 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding: 15px;
   }
   nav .header .navbar ul li a {

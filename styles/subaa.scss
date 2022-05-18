@@ -1,7 +1,6 @@
 @import "button";
 @import "color";
 @import "mixin";
-@import "mediaquery";
 
 *{
     margin: 0;
@@ -61,13 +60,13 @@ nav{
                     .drop{
                         display: none;
                         line-height: 2.7;
-                        position: absolute;
                         margin-top: 15px;
                         background-color: $white;
                         width: 300px;
                         border: 1px solid $border;
                         box-shadow: 0 2px 10px 0 rgb(68, 68, 68);
                         border-radius: 4px;
+                        position: absolute;
                         .drop-down{
                             @include flex;
                             border-bottom: 1px solid $border;
@@ -225,6 +224,9 @@ section{
             transform: translate(55%, 50%);
             &:hover{
                 color: $orange;
+                box-shadow: 0 0px 5px 0px $search-box;
+                border: none;
+                
             }
             @media(max-width:900px){
                 transform: translate((5%,50%));
@@ -248,7 +250,7 @@ section{
             align-items: center;
             justify-content: center;
             width: 100%;
-            transform: translate(0%, 600%);
+            transform: translate(3%, 600%);
             @media (max-width:900px) {
                 display:none;
             }
@@ -264,22 +266,22 @@ section{
                 margin: 0 170px;
             }
             @media (max-width: 1290px){
-                margin: 0 150px;
+                margin: 0 140px;
             }
             @media (max-width: 1209px){
                 margin: 0 120px;
             }
             @media (max-width: 1190px){
-                margin: 0 120px;
-            }
-            @media (max-width: 1088px){
                 margin: 0 100px;
             }
-            @media (max-width: 1008px){
+            @media (max-width: 1088px){
                 margin: 0 90px;
             }
+            @media (max-width: 1008px){
+                margin: 0 80px;
+            }
             @media (max-width: 990px){
-                transform: translate(3.5%,100%);
+                transform: translate(3.5%,80%);
                 margin: 0 100px;
             }
             @media (max-width: 952px){
@@ -294,6 +296,8 @@ section{
                 margin: inherit;
                 li{
                     button{
+                        cursor: pointer;
+                        text-transform: capitalize;
                         background-color: $blue;
                         color: $white;
                         border: 1.5px solid $orange;
@@ -429,6 +433,12 @@ section{
         .national-top{
             display: block;
             .cards{
+                animation: pulse 2s ease-in infinite;
+                    @keyframes pulse{
+                        10%{
+                            transform: scale(0.95);
+                        }
+                    }
                 .card{
                     display: grid;
                     grid-template-columns: 1fr 3fr;
@@ -437,18 +447,12 @@ section{
                     border: 1px solid $blue;
                     border-radius: 5px;
                     box-shadow: 0 5px 10px 0 $blue;
-                    animation: pulse 2s ease-in infinite;
-                    @keyframes pulse{
+                    animation: fallinout 1.5s ease-in; 
+                    @keyframes fallinout {
                         10%{
-                            transform: scale(0.95);
+                            transform: translateX(-350%);
                         }
                     }
-                    // animation: fallinout 1.5s ease-in; 
-                    // @keyframes fallinout {
-                    //     10%{
-                    //         transform: translateX(-350%);
-                    //     }
-                    // }
                     @media (max-width:580px){
                         display: block;
                         align-items: center;
@@ -464,6 +468,7 @@ section{
                     }
                     .content{
                         h2{
+                            color: #333333;
                             padding-bottom: 15px;
                         }
                     }
@@ -479,6 +484,7 @@ section{
         padding: 0px 40px 40px;
         font-size: 40px;
         line-height: 1.2;
+        color: #404040;
         animation: fallout 1.5s ease-in; 
                 @keyframes fallout {
                     10%{
@@ -526,6 +532,7 @@ section{
                 padding: 0 20px;
             }  
             h2{
+                color: #404040;
                 font-size: 40px;
                 margin-bottom: 30px;
                 text-align: center;
@@ -659,6 +666,9 @@ section{
                 text-decoration: none;
                 list-style: none;
                 li{
+                    &:hover{
+                        background-color: $orange;
+                    }
                     p{
                         background-color: $white;
                         color: $black;
@@ -666,6 +676,7 @@ section{
                         text-align: center;
                         font-weight: bold;
                     }
+                    cursor: pointer;
                     text-transform: capitalize;
                     color: $white;
                     background-color: $dark-blue;
@@ -699,6 +710,7 @@ section{
                         padding-bottom: 20px;
                     }
                     button{
+                        cursor: pointer;
                         background-color: $orange;
                         width: 200px;
                         padding: 10px 30px;
@@ -721,7 +733,7 @@ section{
         animation: bounce 1.5s ease-in; 
         @keyframes bounce {
             10%{
-                transform: translateY(350%);
+                transform: translateY(150%);
             }
         }
         @media (max-width:950px){
@@ -764,10 +776,11 @@ section{
             }
             .forms{
                 padding: 50px 20px;
-                
+                transition: 0.10s;
                 &:hover{
                     background-image: url(../assets/images/bg-approach.jpg);
-                    box-shadow: 0 15px 250px 20px $blue;  
+                    box-shadow: 0 0 20px 5px $blue;  
+                    transform: scale(1.01);
                 }
                 .form{
                     justify-self: center;
@@ -803,8 +816,6 @@ section{
         width: 80%;
         max-height: 100vh;
         border-radius: 20px;
-        // display: grid;
-        // grid-template-columns: 1fr ;
         @media (max-width:1050px){
             width: 90%;
             margin-left: 50px;
@@ -827,6 +838,12 @@ section{
         }
         .corpiz{
             padding-right: 500px;
+            animation: up 2s;
+            @keyframes up {
+                10%{
+                    transform: translateY(150%);
+                }
+            }
             @media (max-width:850px){
                 padding: 50px;
             }
@@ -847,7 +864,12 @@ section{
         }
         .app{
             position: absolute;
-
+            animation: up 2s;
+            @keyframes up {
+                10%{
+                    transform: translateY(50%);
+                }
+            }
             img{
                 transform: translate(135%, -82%);
                 width: 100%;
@@ -888,6 +910,7 @@ section{
             margin-top: 50px;
             text-transform: capitalize;
             font-size: 30px;
+            color: #404040;
         }
         .logos{
             .logo{
@@ -922,6 +945,12 @@ section{
             text-align: right;
             max-width: 50%;
             position: relative;
+            animation: fallinout 2s ease-in; 
+                @keyframes fallinout {
+                    10%{
+                        transform: translateX(350%);
+                    }
+                }  
             @media (max-width:850px) {
                 max-width: 100%;
             }
@@ -989,9 +1018,11 @@ section{
                     transform: translate(-30%);
                 }
                 li{
+                    cursor: pointer;
                     list-style: none;
                     margin: 5px;
                     button{
+                        cursor: pointer;
                         font-size: 0;
                         padding: 1px 20px;
                         background-color: $photo-bg;
@@ -1009,6 +1040,12 @@ section{
             text-align: left;
             border-left: 2px solid $orange;
             color: $blue;
+            animation: fallin 2s ease-in; 
+                @keyframes fallin {
+                    10%{
+                        transform: translateX(-350%);
+                    }
+                }
             @media (max-width:1170px) {
                 padding-right: 100px;
             }
@@ -1033,6 +1070,7 @@ section{
                     }
                 }
                 .slick-dots{
+                    cursor: pointer;
                     position: absolute;
                     display: block;
                     left: 50%;
@@ -1056,9 +1094,11 @@ section{
                         transform: translate(700%,-140%);
                     }
                     li{
+                        cursor: pointer;
                         list-style: none;
                         margin: 5px;
                         button{
+                            cursor: pointer;
                             font-size: 0;
                             padding: 5px;
                             border-radius: 50%;
@@ -1101,15 +1141,33 @@ section{
             }
             .card:nth-child(2){
                 background-image: url(../assets/images/card-3.jpg);
+                animation: drop-2 1.5s ease-in; 
+                @keyframes drop-2 {
+                    10%{
+                        transform: translateX(300%);
+                    }
+                }  
                 @media (max-width:1000px) {
                     margin: 20px 0; 
                 }
             }
             .card:nth-child(3){
                 background-image: url(../assets/images/card-4.jpg);
+                animation: drop-3 1.5s ease-in; 
+                @keyframes drop-3 {
+                    10%{
+                        transform: translateY(300%);
+                    }
+                }  
             }
             .card:nth-child(4){
                 background-image: url(../assets/images/card-1.jpg);
+                animation: drop-4 1.5s ease-in; 
+                @keyframes drop-4 {
+                    10%{
+                        transform: translateX(300%);
+                    }
+                }  
                 @media (max-width:1000px) {
                     margin: 20px 0; 
                 }
@@ -1121,20 +1179,33 @@ section{
                 background-position: center ;
                 overflow: hidden;
                 transition: 0.1s;
+                position: relative;
+                animation: drop 1.5s ease-in; 
+                @keyframes drop {
+                    10%{
+                        transform: translateY(300%);
+                    }
+                }  
                 &:hover{
                     transform: scale(1.1);
                     box-shadow: 10px 20px 15px 1px $blue;
+
                     @media (max-width:600px) {
                         transform: scale(0.9);
+                    }
+                    @media (max-width:1000px) {
+                        box-shadow: 0px 0px 15px 5px $blue;
                     }
                 }
                 .info{
                     background-color: $card-bg;
+                    background-size: cover;
                     .header{
                         display: flex;
                         flex-wrap: wrap;
                         align-items: center;
                         padding: 10px 8px;
+                        gap: 12px;
                         color: $white;
                         border-bottom: 1px solid $orange;
                         @media (max-width:1000px) {
@@ -1153,15 +1224,20 @@ section{
                             font-size: 15px;
                         }
                         p{
+                            margin-left: 50px;
                             font-size: 10px;
+                            @media (max-width:1000px) {
+                                margin-left: 0;
+                            }
                         }
                     }
+                    
                     .content{
                         text-transform: capitalize;
                         margin-top: 100px;
                         padding-left: 20px;
-                        // background-color: $card-bg;
                         button{
+                            cursor: pointer;
                             border: none;
                             background-color: $orange;
                             padding: 5px 20px;
@@ -1172,8 +1248,11 @@ section{
                             font-size: 20px;
                             color: $white;
                             margin: 20px 0;
+                            padding-right: 20px;
+
                         }
                         p{
+                            cursor: pointer;
                             padding-bottom: 20px;
                             color: $orange;
                             font-weight: bold;
@@ -1196,6 +1275,10 @@ section{
                 }
                 span{
                     transition: 0.5s;
+                    opacity: 0;
+                }
+                &:hover span{
+                    opacity: 1;
                 }
                 span:nth-child(1){
                     position: absolute;
@@ -1280,9 +1363,10 @@ section{
         justify-content: center;
         margin-bottom: 40px;
         button{
+            cursor: pointer;
             text-transform: capitalize;
             border: none;
-            padding: 5px 20px;
+            padding: 15px 20px;
             font-size: 20px;
             font-weight: bold;
             color: $white;
@@ -1364,6 +1448,12 @@ section{
                 display: block;
             }
             .flex{
+                animation: pop-up 1.9s ease-in; 
+                @keyframes pop-up {
+                    10%{
+                        transform: translateY(350%);
+                    }
+                }
                 h1{
                     color: $orange;
                     text-transform: uppercase;
@@ -1371,6 +1461,7 @@ section{
                     padding-bottom: 20px;
                 }
                 ul{
+                    cursor: pointer;
                     list-style: none;
                     text-decoration: none;
                     text-transform: capitalize;
@@ -1403,10 +1494,11 @@ section{
             color: $white;
             text-transform: capitalize;
             ul{
+            cursor: pointer;
             display: flex;
             list-style: none;
             gap:30px;
-            font-size: 14px;
+            font-size: 14px;  
             @media (max-width:950px) {
                 gap: 10px;
             }
@@ -1456,6 +1548,7 @@ section{
                     display: block;
                     li{
                         @include flex;
+                        align-items: flex-start;
                         padding: 15px;
                         a{
                             color: $white;
@@ -1472,8 +1565,10 @@ section{
                             opacity: 1;
                             left: 0;
                             width: 100%;
-                            .drop-down:hover{
-                                background: $orange;
+                            .drop-down{
+                                &:hover{
+                                    background: $orange;
+                                }
                             }
                         }
                         .btn{
