@@ -1147,4 +1147,134 @@
   margin-top: 80px;
   text-align: center;
 }
+
+.footer_content {
+  background-color: #15426d;
+  color: #ffffff;
+  padding: 4em;
+}
+
+.footer_content .footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.footer_content .footer .social_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer_content .footer .social_media .fa-brands {
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.footer_content .footer .social_media span {
+  font-size: 15px;
+  color: yellow;
+}
+
+.footer_content .footer .social_media span:hover {
+  color: #ff7d00;
+}
+
+.footer_content .footer .start_business {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer_content .footer .ngo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer_content .footer .tax {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer_content .footer .compliance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer_content .footer h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: greenyellow;
+}
+
+.footer_content .footer a {
+  text-decoration: none;
+  color: red;
+  font-size: 16px;
+  line-height: 2em;
+  cursor: pointer;
+}
+
+.footer_content .footer a:hover {
+  color: aqua;
+}
+
+.footer_content .footer_end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  gap: 20px;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
+.footer_content .footer_end a {
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.footer_content .footer_end a:hover {
+  color: orange;
+}
+
+.footer_content p {
+  color: white;
+  margin-top: 40px;
+  text-align: center;
+}
 /*# sourceMappingURL=suganya.css.map */

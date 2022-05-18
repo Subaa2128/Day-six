@@ -770,3 +770,88 @@
   margin-top: 80px;
   text-align: center;
 }
+
+.footer_content {
+  background-color: #15426d;
+  color: #ffffff;
+  padding: 4em;
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+
+    .social_media {
+      display: flex;
+      flex-direction: column;
+      .fa-brands {
+        font-size: 20px;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      span {
+        font-size: 15px;
+        color: yellow;
+        &:hover {
+          color: #ff7d00;
+        }
+      }
+    }
+
+    .start_business {
+      display: flex;
+      flex-direction: column;
+    }
+    .ngo {
+      display: flex;
+      flex-direction: column;
+    }
+    .tax {
+      display: flex;
+      flex-direction: column;
+    }
+    .compliance {
+      display: flex;
+      flex-direction: column;
+    }
+    h4 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: greenyellow;
+    }
+    a {
+      text-decoration: none;
+      // list-style: none;
+      color: red;
+      font-size: 16px;
+      // font-weight: 100;
+      line-height: 2em;
+      cursor: pointer;
+      &:hover {
+        color: aqua;
+      }
+    }
+  }
+  .footer_end {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+    a {
+      text-decoration: none;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: red;
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+  p {
+    color: white;
+    margin-top: 40px;
+    text-align: center;
+  }
+}
