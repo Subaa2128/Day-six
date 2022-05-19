@@ -54,7 +54,7 @@ type();
 
 //swiper
 
-var swiper = new swiper(".myapps", {
+var swiper = new Swiper(".mySwiper", {
   slidesPerView: 5,
   loop: true,
   spaceBetween: 40,
@@ -76,6 +76,7 @@ var swiper = new swiper(".myapps", {
       slidesPerView: 5,
     },
   },
+
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
