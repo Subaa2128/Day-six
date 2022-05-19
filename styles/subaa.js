@@ -94,3 +94,20 @@ $(document).ready(function(){
       arrows:false,
     });
     });
+
+
+
+$(document).ready(function(){
+
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 40){
+      $('.button-fixed').fadeIn();
+    }else{
+      $('.button-fixed').fadeOut();
+    }
+  });
+
+  $(".button-fixed").click(function(){
+    $('html ,body').animate({scrollTop : 0},800);
+  });
+});    
