@@ -1263,6 +1263,72 @@
   z-index: -1000;
 }
 
+.visit_line {
+  padding: 2em;
+  font-size: 22px;
+}
+
+.visit_line span {
+  color: #5d001e;
+}
+
+.articles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 3em;
+}
+
+.articles .articles_card {
+  background-color: #5d001e;
+  cursor: pointer;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.articles .articles_card img {
+  width: 8%;
+  border-radius: 50%;
+}
+
+.articles .articles_card span {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-bottom: 1px solid gray;
+  margin-top: 30px;
+}
+
+.articles .articles_card button {
+  padding: 5px 6px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #941750;
+  color: White;
+  cursor: pointer;
+}
+
+.articles .articles_card h3 {
+  font-size: 17px;
+  color: white;
+  font-weight: 700;
+}
+
+.articles .articles_card p {
+  font-size: 20px;
+  color: yellow;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
 .footer_content {
   background-color: #5d001e;
   color: #ffffff;
@@ -1423,14 +1489,5 @@
   color: #ff90b3;
   margin-top: 20px;
   text-align: center;
-}
-
-.visit_line {
-  padding: 2em;
-  font-size: 22px;
-}
-
-.visit_line span {
-  color: #5d001e;
 }
 /*# sourceMappingURL=suganya.css.map */
