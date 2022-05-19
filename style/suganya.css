@@ -1358,6 +1358,47 @@
   background: #5d001e;
 }
 
+.bottom_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: yellowgreen;
+  height: 200px;
+  padding-left: 15%;
+  padding-top: 20px;
+}
+
+.bottom_bar h1 {
+  font-size: 35px;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.bottom_bar .subscribe input {
+  padding: 10px;
+  margin-left: 60px;
+  margin-top: 50px;
+  width: 350px;
+  height: 40px;
+  border-radius: 15px;
+  color: #b10f2e;
+  border-color: yellow;
+}
+
+.bottom_bar button {
+  font-size: 15px;
+  border: none;
+  padding: 8px 14px;
+  margin-left: 50px;
+  background: #c81041;
+  color: white;
+  cursor: pointer;
+}
+
+.bottom_bar button:hover {
+  background: blueviolet;
+}
+
 .footer_content {
   background-color: #5d001e;
   color: #ffffff;
