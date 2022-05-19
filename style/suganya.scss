@@ -18,7 +18,7 @@
   align-items: center;
   position: fixed;
   width: 100%;
-  background: $white;
+  background: #eaf4f4;
   top: 0;
   left: 0;
   right: 0;
@@ -906,6 +906,27 @@
       font-weight: 700;
       margin-top: 15px;
       margin-bottom: 30px;
+    }
+  }
+}
+
+.read_articles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    cursor: pointer;
+    padding: 8px 25px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-bottom: 60px;
+    outline: none;
+    border: none;
+    background-color: orange;
+    color: white;
+    &:hover {
+      background: #5d001e;
     }
   }
 }
