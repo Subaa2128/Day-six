@@ -27,7 +27,7 @@
           align-items: center;
   position: fixed;
   width: 100%;
-  background: #eaf4f4;
+  background: #fafafa;
   top: 0;
   left: 0;
   right: 0;
@@ -66,7 +66,7 @@
     font-size: 35px;
     margin-left: 40px;
     cursor: pointer;
-    color: #ffffff;
+    color: #fafafa;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -126,7 +126,7 @@
 
 .navbar_brand .navbar ul li a {
   text-decoration: none;
-  color: #941750;
+  color: #6d6875;
   position: relative;
   font-size: 19px;
   font-weight: bold;
@@ -145,17 +145,17 @@
 }
 
 .navbar_brand .navbar .btn button {
-  background-color: #5d001e;
+  background-color: #faa307;
   color: #ffffff;
-  -webkit-box-shadow: inset 0 0 0 0 #ee4c7c;
-          box-shadow: inset 0 0 0 0 #ee4c7c;
+  -webkit-box-shadow: inset 0 0 0 0 #023e8a;
+          box-shadow: inset 0 0 0 0 #023e8a;
   -webkit-transition: ease-out 0.5s;
   transition: ease-out 0.5s;
 }
 
 .navbar_brand .navbar .btn button:hover {
-  -webkit-box-shadow: inset 100px 0 0 0 #ee4c7c;
-          box-shadow: inset 100px 0 0 0 #ee4c7c;
+  -webkit-box-shadow: inset 100px 0 0 0 #023e8a;
+          box-shadow: inset 100px 0 0 0 #023e8a;
 }
 
 .navbar_brand .navbar .drop {
@@ -181,9 +181,9 @@
 }
 
 .navbar_brand .navbar .drop .drop_down:hover {
-  border-left: 4px solid #5d001e;
-  background-color: #ee4c7c;
-  color: #5d001e;
+  border-left: 4px solid #023e8a;
+  background-color: #faa307;
+  color: #023e8a;
 }
 
 .navbar_brand .navbar .drop .drop_down:hover p:hover {
@@ -191,7 +191,7 @@
 }
 
 .navbar_brand .navbar .drop p {
-  color: #5d001e;
+  color: #023e8a;
   font-weight: bold;
   padding-left: 10px;
   font-size: 15px;
@@ -208,19 +208,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #ff90b3;
+  border-bottom: 1px solid #ade8f4;
   padding: 0 15px;
 }
 
 .navbar_brand .navbar .fa-whatsapp {
   font-weight: bold;
-  color: #5d001e;
+  color: #25d366;
   font-size: 27px;
   cursor: pointer;
-}
-
-.navbar_brand .navbar .fa-whatsapp:hover {
-  color: #ee4c7c;
 }
 
 @media (max-width: 1200px) {
@@ -231,13 +227,13 @@
 }
 
 .navbar_brand .navbar .fa-whatsapp p {
-  color: #ee4c7c;
-  font-size: 20px;
+  color: #6d6875;
+  font-size: 19px;
   margin-top: 5px;
 }
 
 .navbar_brand .navbar .fa-whatsapp p:hover {
-  color: #5d001e;
+  color: #faa307;
 }
 
 @media (max-width: 1200px) {
@@ -248,14 +244,10 @@
 }
 
 .navbar_brand .navbar .fa-phone {
-  color: #5d001e;
+  color: #023e8a;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
-}
-
-.navbar_brand .navbar .fa-phone:hover {
-  color: #ee4c7c;
 }
 
 @media (max-width: 1200px) {
@@ -266,13 +258,13 @@
 }
 
 .navbar_brand .navbar .fa-phone p {
-  color: #ee4c7c;
-  font-size: 20px;
+  color: #6d6875;
+  font-size: 19px;
   margin-top: 6px;
 }
 
 .navbar_brand .navbar .fa-phone p:hover {
-  color: #5d001e;
+  color: #faa307;
 }
 
 @media (max-width: 1200px) {
@@ -309,7 +301,7 @@
 
 .search_bar .search_box {
   position: absolute;
-  border: 0.5px solid #e3afbc;
+  border: 0.5px solid #ade8f4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,7 +313,7 @@
           align-items: center;
   gap: 0.1em;
   padding: 0 1em;
-  color: #5d001e;
+  color: #faa307;
   width: 47%;
   margin-top: 110px;
   -webkit-transform: translate(57%, 50%);
@@ -346,7 +338,7 @@
 }
 
 .search_bar .search_box:hover {
-  color: #ee4c7c;
+  color: #023e8a;
   cursor: pointer;
 }
 
@@ -387,7 +379,7 @@
 
 .search_bar .popular h5 {
   font-size: 22px;
-  color: #5d001e;
+  color: #023e8a;
 }
 
 .search_bar .content {
@@ -499,18 +491,19 @@
 }
 
 .search_bar .content ul li p {
-  background-color: #ff90b3;
+  background-color: #cddafd;
   cursor: pointer;
   font-weight: 800;
   font-size: 11px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 4px 7px;
   padding: 6px;
 }
 
 .search_bar .content ul li p:hover {
-  background: #941750;
-  color: white;
+  background: #95a7da;
+  -webkit-box-shadow: 3px 3px 3px #5c5552;
+          box-shadow: 3px 3px 3px #5c5552;
 }
 
 .search_bar .moblie_app {
@@ -712,9 +705,9 @@
 .card_container .corpbiz_box {
   border: 1px solid;
   border: none;
-  background-color: #5d001e;
+  background-color: #001845;
   border-radius: 10px;
-  color: #ffccd5;
+  color: #ffffff;
   padding: 50px;
 }
 
