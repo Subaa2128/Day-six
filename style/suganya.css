@@ -771,9 +771,9 @@
 }
 
 .card_container .animation_card .cards p {
-  font-size: 17px;
-  color: #343a40;
-  font-weight: 600;
+  font-size: 18px;
+  color: #212529;
+  font-weight: 500;
 }
 
 .card_container .animation_card .cards img {
@@ -895,7 +895,7 @@
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  background-color: #5d001e;
+  background-color: #001845;
   padding: 4em;
 }
 
@@ -928,17 +928,17 @@
   text-decoration: none;
   margin-bottom: 10px;
   display: block;
-  background-color: #941750;
+  background-color: #0e2b63;
   font-size: 20px;
   line-height: 50px;
   padding-left: 15px;
   padding-right: 20px;
-  color: White;
+  font-weight: 700;
+  color: #f8f9fa;
 }
 
 .service_content .business_registration .service_box a:hover {
-  background-color: #ff90b3;
-  color: #5d001e;
+  border: 1px solid #f8edeb;
 }
 
 @media (max-width: 900px) {
@@ -954,7 +954,7 @@
           writing-mode: vertical-lr;
   font-size: 20px;
   letter-spacing: 13px;
-  color: #e3afbc;
+  color: #6c757d;
   margin-top: 60px;
   margin-left: -60px;
 }
@@ -968,6 +968,14 @@
 .service_content .registration_box {
   background-color: white;
   margin-left: 30px;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.service_content .registration_box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (max-width: 900px) {
@@ -989,7 +997,7 @@
 
 .service_content .registration_box h5 {
   font-size: 20px;
-  color: #5d001e;
+  color: #001845;
   padding: 0 20px;
   text-align: center;
   margin-bottom: 30px;
@@ -999,10 +1007,10 @@
 .service_content .registration_box p {
   text-align: center;
   margin-bottom: 30px;
-  color: #ee4c7c;
-  font-weight: 700;
-  padding: 0 12px;
-  font-size: 16px;
+  color: #343a40;
+  font-weight: 600;
+  padding: 0 20px;
+  font-size: 17px;
   line-height: 1.5em;
 }
 
@@ -1019,10 +1027,12 @@
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
   width: 130px;
   height: 40px;
   border: none;
-  background-color: #5d001e;
+  background-color: #fb8b24;
   outline: none;
   color: White;
   font-size: 16px;
@@ -1030,9 +1040,9 @@
 }
 
 .service_content .registration_box button:hover {
-  background-color: #ff90b3;
-  color: #5d001e;
-  border: 1px solid Violet;
+  background-color: #001845;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .user_info {
@@ -1089,7 +1099,7 @@
 }
 
 .user_info .user_list:hover {
-  background-color: #941750;
+  background-color: #023e8a;
   color: black;
 }
 
@@ -1220,10 +1230,10 @@
 }
 
 .partner {
-  font-size: 25px;
-  margin-top: 80px;
+  font-size: 26px;
+  margin-top: 110px;
   text-align: center;
-  color: #5d001e;
+  color: #001845;
 }
 
 .swiper {
@@ -1251,19 +1261,20 @@
 .swiper .swiper-slide img {
   cursor: pointer;
   display: block;
-  width: 150px;
-  height: 80px;
+  width: 200px;
+  height: 60px;
   place-items: center;
   z-index: -1000;
 }
 
 .visit_line {
-  padding: 2em;
+  padding-left: 70px;
+  color: #212529;
   font-size: 22px;
 }
 
 .visit_line span {
-  color: #5d001e;
+  color: #023e8a;
 }
 
 .articles {
@@ -1276,7 +1287,7 @@
 }
 
 .articles .articles_card {
-  background-color: #5d001e;
+  background-color: #0e2b63;
   cursor: pointer;
   padding: 1em;
   border-radius: 10px;
@@ -1296,7 +1307,7 @@
 }
 
 .articles .articles_card button {
-  padding: 5px 6px;
+  padding: 6px 7px;
   border-radius: 2px;
   border: none;
   outline: none;
@@ -1304,9 +1315,14 @@
   margin-bottom: 20px;
   font-size: 12px;
   font-weight: 700;
-  background-color: #941750;
-  color: White;
+  background-color: #fb8b24;
+  color: #f8f9fa;
   cursor: pointer;
+}
+
+.articles .articles_card button:hover {
+  background: none;
+  border: 1px solid #f8edeb;
 }
 
 .articles .articles_card h3 {
@@ -1317,10 +1333,10 @@
 
 .articles .articles_card p {
   font-size: 20px;
-  color: yellow;
+  color: #fb8b24;
   font-weight: 700;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 .read_articles {
@@ -1344,19 +1360,19 @@
   margin-bottom: 60px;
   outline: none;
   border: none;
-  background-color: orange;
-  color: white;
+  background-color: #0e2b63;
+  color: #f8f9fa;
 }
 
 .read_articles button:hover {
-  background: #5d001e;
+  background: #fb8b24;
 }
 
 .bottom_bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: yellowgreen;
+  background-color: #fb8b24;
   height: 200px;
   padding-left: 15%;
   padding-top: 20px;
@@ -1364,38 +1380,38 @@
 
 .bottom_bar h1 {
   font-size: 35px;
-  color: #ffffff;
+  color: #212529;
   margin-top: 30px;
 }
 
 .bottom_bar .subscribe input {
-  padding: 10px;
+  padding: 15px;
   margin-left: 60px;
   margin-top: 50px;
   width: 350px;
-  height: 40px;
-  border-radius: 15px;
+  height: 42px;
+  border-radius: 18px;
   color: #b10f2e;
-  border-color: yellow;
+  border: none;
 }
 
 .bottom_bar button {
   font-size: 15px;
-  border: none;
-  padding: 8px 14px;
+  padding: 10px 14px;
   margin-left: 50px;
-  background: #c81041;
+  background: #062256;
+  border: none;
   color: white;
   cursor: pointer;
 }
 
 .bottom_bar button:hover {
-  background: blueviolet;
+  background: #0a4491;
 }
 
 .footer_content {
-  background-color: #5d001e;
-  color: #ffffff;
+  background-color: #001845;
+  color: #f8f9fa;
   padding: 80px 80px 25px 80px;
 }
 
@@ -1432,17 +1448,13 @@
 
 .footer_content .footer .social_media .fa-brands {
   font-size: 20px;
-  color: #ffccd5;
+  color: #faa307;
   cursor: pointer;
   margin-bottom: 10px;
 }
 
-.footer_content .footer .social_media .fa-brands:hover {
-  color: #b10f2e;
-}
-
 .footer_content .footer .social_media h3 {
-  color: #ee4c7c;
+  color: #fb8b24;
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -1450,7 +1462,7 @@
 .footer_content .footer .social_media span {
   font-size: 15px;
   margin-left: 10px;
-  color: #e3afbc;
+  color: #f8f9fa;
 }
 
 .footer_content .footer .start_business {
@@ -1497,12 +1509,12 @@
   font-size: 18px;
   margin-bottom: 8px;
   font-weight: 700;
-  color: #ee4c7c;
+  color: #fb8b24;
 }
 
 .footer_content .footer a {
   text-decoration: none;
-  color: #e3afbc;
+  color: #f8f9fa;
   font-size: 15px;
   line-height: 1.8em;
   cursor: pointer;
@@ -1524,8 +1536,8 @@
           justify-content: left;
   margin-top: 50px;
   gap: 30px;
-  border-top: 1px solid #ae818d;
-  border-bottom: 1px solid #ae818d;
+  border-top: 1px solid #168aad;
+  border-bottom: 1px solid #168aad;
 }
 
 @media (max-width: 900px) {
@@ -1542,15 +1554,16 @@
   margin-top: 10px;
   margin-bottom: 15px;
   font-size: 15px;
-  color: #e3afbc;
+  color: #f8f9fa;
 }
 
 .footer_content .footer_end a:hover {
-  color: #ee4c7c;
+  color: #fb8b24;
+  text-decoration: underline;
 }
 
 .footer_content p {
-  color: #ff90b3;
+  color: #f8f9fa;
   margin-top: 20px;
   text-align: center;
 }
