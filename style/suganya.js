@@ -86,3 +86,37 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+$(".star_slide").slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  autoplay: true,
+  slidesToShow: 1,
+  arrows: false,
+});
+
+$(document).ready(function () {
+  $(".news_slider").slick({
+    slidesToShow: 1,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    autoplay: true,
+    arrows: false,
+  });
+});
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 40) {
+      $(".button-fixed").fadeIn();
+    } else {
+      $(".button-fixed").fadeOut();
+    }
+  });
+
+  $(".button-fixed").click(function () {
+    $("html ,body").animate({ scrollTop: 0 }, 800);
+  });
+});
