@@ -298,10 +298,10 @@ section{
             }
             @media (max-width: 990px){
                 transform: translate(3.5%,80%);
-                margin: 0 100px;
+                margin: 0 120px;
             }
             @media (max-width: 952px){
-                margin: 0 90px;
+                margin: 0 100px;
             }
             @media (max-width:900px) {
                 display:none;
@@ -1596,6 +1596,9 @@ section{
                 top: 0;
                 background-color: $blue;
                 padding: 15px 0;
+                @media (max-width:400px){
+                    width: 100%;
+                }
                 ul{
                     display: block;
                     li{
@@ -1626,7 +1629,6 @@ section{
                         .btn{
                             button{
                                 background-color: $orange;
-                                margin-top: 20px;
                                 &:hover{
                                     background: $border;
                                     color: $black;

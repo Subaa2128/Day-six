@@ -408,13 +408,13 @@ section .search-play .buttons {
   section .search-play .buttons {
     -webkit-transform: translate(3.5%, 80%);
             transform: translate(3.5%, 80%);
-    margin: 0 100px;
+    margin: 0 120px;
   }
 }
 
 @media (max-width: 952px) {
   section .search-play .buttons {
-    margin: 0 90px;
+    margin: 0 100px;
   }
 }
 
@@ -2423,6 +2423,15 @@ section .footer .copyright h4 {
     background-color: #15426d;
     padding: 15px 0;
   }
+}
+
+@media (max-width: 1100px) and (max-width: 400px) {
+  nav .header .navbar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
   nav .header .navbar ul {
     display: block;
   }
@@ -2462,7 +2471,6 @@ section .footer .copyright h4 {
   }
   nav .header .navbar ul li .btn button {
     background-color: #efa434;
-    margin-top: 20px;
   }
   nav .header .navbar ul li .btn button:hover {
     background: #e6e6e6;
