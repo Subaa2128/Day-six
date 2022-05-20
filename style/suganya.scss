@@ -15,15 +15,11 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
   z-index: 1000;
-  align-items: center;
   position: fixed;
   width: 100%;
-  background: #fafafa;
-  top: 0;
-  left: 0;
-  right: 0;
+  background-color: $white_1;
+  @include relative;
   margin: auto;
-  padding: 10px 30px;
   .logo img {
     width: 180px;
   }
@@ -45,7 +41,7 @@
       font-size: 35px;
       margin-left: 40px;
       cursor: pointer;
-      color: #fafafa;
+      color: $white_1;
       display: flex;
     }
   }
@@ -56,11 +52,11 @@
       display: none;
       position: fixed;
       right: 0;
+      top: 0;
+      margin-top: 0;
       width: 60%;
       height: 100vh;
-      margin-top: 0;
-      top: 0;
-      background-color: #5d001e;
+      background-color: $blue_1;
       padding: 15px 0;
     }
     ul {
@@ -73,7 +69,7 @@
         @media (max-width: 1200px) {
           @include collaborate;
           padding: 15px;
-          color: #ffffff;
+          color: $white_1;
         }
         &:hover {
           .drop {
@@ -82,13 +78,13 @@
         }
         a {
           text-decoration: none;
-          color: #6d6875;
+          color: $gray_1;
           position: relative;
           font-size: 19px;
           font-weight: bold;
 
           @media (max-width: 1200px) {
-            color: #ffffff;
+            color: $white_1;
             font-weight: bold;
           }
         }
@@ -101,12 +97,12 @@
     .btn {
       button {
         @extend .button_format;
-        background-color: #faa307;
-        color: #ffffff;
-        box-shadow: inset 0 0 0 0 #023e8a;
+        background-color: $orange_1;
+        color: $white_1;
+        box-shadow: inset 0 0 0 0 $blue_1;
         transition: ease-out 0.5s;
         &:hover {
-          box-shadow: inset 100px 0 0 0 #023e8a;
+          box-shadow: inset 100px 0 0 0 $blue_1;
         }
       }
     }
@@ -116,8 +112,8 @@
       line-height: 3;
       position: absolute;
       margin-top: 15px;
-      box-shadow: 0 2px 10px 0 rgb(0, 0, 0.3);
-      background-color: $white;
+      box-shadow: 0 2px 10px 0 $black_1;
+      background-color: $white_1;
       width: 300px;
       border-radius: 5px;
       @media (max-width: 1200px) {
@@ -128,15 +124,15 @@
         width: 100%;
       }
       .drop_down:hover {
-        border-left: 4px solid #023e8a;
-        background-color: #faa307;
-        color: #023e8a;
+        border-left: 4px solid $blue_1;
+        background-color: $orange_1;
+        color: $blue_1;
         p:hover {
-          color: $white;
+          color: $white_1;
         }
       }
       p {
-        color: #023e8a;
+        color: $blue_1;
         font-weight: bold;
         padding-left: 10px;
         font-size: 15px;
@@ -145,52 +141,52 @@
       .drop_down {
         @include collaborate;
         align-items: center;
-        border-bottom: 1px solid #ade8f4;
+        border-bottom: 1px solid $light_blue;
         padding: 0 15px;
       }
     }
     .fa-whatsapp {
       font-weight: bold;
-      color: #25d366;
+      color: $whatsapp;
       font-size: 27px;
       cursor: pointer;
       @media (max-width: 1200px) {
-        color: #ffffff;
+        color: $white_1;
         font-size: 30px;
       }
 
       p {
-        color: #6d6875;
+        color: $gray_1;
         font-size: 19px;
         margin-top: 5px;
         &:hover {
-          color: #faa307;
+          color: $orange_1;
         }
         @media (max-width: 1200px) {
-          color: #ffffff;
+          color: $white_1;
           font-weight: normal;
         }
       }
     }
     .fa-phone {
-      color: #023e8a;
+      color: $blue_1;
       font-size: 24px;
       font-weight: bold;
       cursor: pointer;
       @media (max-width: 1200px) {
-        color: #ffffff;
+        color: $white_1;
         font-size: 30px;
       }
 
       p {
-        color: #6d6875;
+        color: $gray_1;
         font-size: 19px;
         margin-top: 6px;
         &:hover {
-          color: #faa307;
+          color: $orange_1;
         }
         @media (max-width: 1200px) {
-          color: #ffffff;
+          color: $white_1;
           font-weight: normal;
         }
       }
@@ -201,7 +197,7 @@
   }
 }
 .navbar_brand.shadow {
-  box-shadow: 0 0 20px $gray;
+  box-shadow: 0 0 20px $gray_1;
 }
 .search_bar {
   background-image: url(/asset/images/backgroung.jpg);
@@ -217,12 +213,12 @@
 
   .search_box {
     position: absolute;
-    border: 0.5px solid #ade8f4;
+    border: 0.5px solid $light_blue;
     @include collaborate;
     align-items: center;
     gap: 0.1em;
     padding: 0 1em;
-    color: #faa307;
+    color: $orange_1;
     width: 47%;
     margin-top: 110px;
     transform: translate(57%, 50%);
@@ -232,14 +228,14 @@
     }
 
     @media (max-width: 900px) {
-      background-color: $white;
+      background-color: $white_1;
       width: 90%;
       transform: translate(4%, -70%);
       height: 50px;
     }
 
     &:hover {
-      color: #023e8a;
+      color: $blue_1;
       cursor: pointer;
     }
 
@@ -266,7 +262,7 @@
     }
     h5 {
       font-size: 22px;
-      color: #023e8a;
+      color: $blue_1;
     }
   }
   .content {
@@ -325,16 +321,17 @@
 
       li {
         p {
-          background-color: #cddafd;
+          background-color: #7594ce;
           cursor: pointer;
-          font-weight: 800;
+          font-weight: 700;
           font-size: 11px;
           border-radius: 5px;
           margin: 4px 7px;
           padding: 6px;
           &:hover {
-            background: #95a7da;
-            box-shadow: 3px 3px 3px #5c5552;
+            background: $blue_1;
+            color: $white_1;
+            box-shadow: 3px 3px 3px $gray_2;
           }
         }
       }
@@ -388,11 +385,11 @@
     .stars {
       display: flex;
       align-items: center;
-      color: #ff7d00;
+      color: $orange_2;
       @media (max-width: 900px) {
         display: flex;
         align-items: center;
-        color: #ff7d00;
+        color: $orange_2;
       }
     }
     .google_play {
@@ -460,7 +457,7 @@
     border: none;
     background-color: #001845;
     border-radius: 10px;
-    color: #f8edeb;
+    color: $white_3;
     padding: 50px;
     h3 {
       font-size: 24px;
@@ -486,7 +483,7 @@
       margin: 20px 0;
       border: none;
       border-radius: 5px;
-      box-shadow: -2px 0px 30px -4px #ccc5b9;
+      box-shadow: -2px 0px 30px -4px $gray_1;
       animation: pulse 1.4s ease-out infinite;
       @keyframes pulse {
         50% {
@@ -495,13 +492,13 @@
       }
       h2 {
         font-size: 22px;
-        color: #003566;
-        font-weight: 800;
+        color: $blue_2;
+        font-weight: 700;
         margin-bottom: 20px;
       }
       p {
         font-size: 18px;
-        color: #212529;
+        color: $brown;
         font-weight: 500;
       }
       img {
@@ -516,7 +513,7 @@
   h2 {
     margin-left: 50px;
     font-size: 40px;
-    color: #1c2541;
+    color: $blue_3;
     @media (max-width: 900px) {
       margin-left: 0;
     }
@@ -524,11 +521,11 @@
     @media (max-width: 900px) {
       font-size: 25px;
       text-align: center;
-      color: $gray;
+      color: $gray_1;
     }
   }
   span {
-    color: #023e8a;
+    color: $blue_1;
   }
 }
 
@@ -551,7 +548,7 @@
       letter-spacing: 12px;
       font-size: 25px;
       padding: 1em;
-      color: #adb5bd;
+      color: $gray_4;
     }
     .working_process {
       padding: 5em;
@@ -560,7 +557,7 @@
         font-size: 18px;
         font-weight: 600;
         line-height: 32px;
-        color: #343a40;
+        color: $gray_5;
       }
       @media (max-width: 900px) {
         padding: 10px;
@@ -581,7 +578,7 @@
   h3 {
     font-size: 38px;
     margin-bottom: -70px;
-    color: #212529;
+    color: $brown;
     margin-left: 190px;
     margin-top: 60px;
     @media (max-width: 900px) {
@@ -593,7 +590,7 @@
 .service_content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: #001845;
+  background-color: $blue_5;
   padding: 4em;
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
@@ -611,15 +608,15 @@
         text-decoration: none;
         margin-bottom: 10px;
         display: block;
-        background-color: #0e2b63;
+        background-color: $blue_4;
         font-size: 20px;
         line-height: 50px;
         padding-left: 15px;
         padding-right: 20px;
         font-weight: 700;
-        color: #f8f9fa;
+        color: $white_1;
         &:hover {
-          border: 1px solid #f8edeb;
+          border: 1px solid $white_3;
         }
       }
       @media (max-width: 900px) {
@@ -631,7 +628,7 @@
       writing-mode: vertical-lr;
       font-size: 20px;
       letter-spacing: 13px;
-      color: #6c757d;
+      color: $gray_4;
       margin-top: 60px;
       margin-left: -60px;
       @media (max-width: 900px) {
@@ -640,7 +637,7 @@
     }
   }
   .registration_box {
-    background-color: white;
+    background-color: $white_1;
     margin-left: 30px;
     cursor: pointer;
     transition: 1s;
@@ -661,7 +658,7 @@
     }
     h5 {
       font-size: 20px;
-      color: #001845;
+      color: $blue_1;
       padding: 0 20px;
       text-align: center;
       margin-bottom: 30px;
@@ -670,7 +667,7 @@
     p {
       text-align: center;
       margin-bottom: 30px;
-      color: #343a40;
+      color: $gray;
       font-weight: 600;
       padding: 0 20px;
       font-size: 17px;
@@ -688,13 +685,13 @@
       width: 130px;
       height: 40px;
       border: none;
-      background-color: #fb8b24;
+      background-color: $orange_1;
       outline: none;
-      color: White;
+      color: $white_1;
       font-size: 16px;
       z-index: -1;
       &:hover {
-        background-color: #001845;
+        background-color: $blue_4;
         transform: scale(1.1);
       }
     }
@@ -717,12 +714,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid white;
+    border: 1px solid $white_1;
     @media (max-width: 900px) {
       padding: 1em;
     }
     p {
-      color: #ffffff;
+      color: $white_1;
       font-size: 20px;
       font-weight: 700;
     }
@@ -731,8 +728,8 @@
       margin-bottom: 10px;
     }
     &:hover {
-      background-color: #023e8a;
-      color: black;
+      background-color: $blue_1;
+      color: $black_1;
     }
   }
 }
@@ -744,7 +741,6 @@
   position: relative;
   padding: 58px 40px;
   margin-top: 6rem;
-  // margin-left: 180px;
   transform: translate(17%, 10%);
 
   width: 75%;
@@ -763,7 +759,7 @@
     h2 {
       font-size: 40px;
       margin-bottom: 20px;
-      color: #212529;
+      color: $brown;
     }
     p {
       margin-bottom: 20px;
@@ -820,7 +816,7 @@
   font-size: 26px;
   margin-top: 110px;
   text-align: center;
-  color: #001845;
+  color: $blue_5;
 }
 .swiper {
   width: 100%;
@@ -849,10 +845,10 @@
 
 .visit_line {
   padding-left: 70px;
-  color: #212529;
+  color: $brown;
   font-size: 22px;
   span {
-    color: #023e8a;
+    color: $blue_1;
   }
 }
 
@@ -862,7 +858,7 @@
   gap: 20px;
   padding: 3em;
   .articles_card {
-    background-color: #0e2b63;
+    background-color: $blue_5;
     cursor: pointer;
     padding: 1em;
     border-radius: 10px;
@@ -872,10 +868,10 @@
       border-radius: 50%;
     }
     span {
-      color: white;
+      color: $white_1;
       font-size: 13px;
       font-weight: 700;
-      border-bottom: 1px solid gray;
+      border-bottom: 1px solid $gray_1;
       margin-top: 30px;
     }
     button {
@@ -887,22 +883,22 @@
       margin-bottom: 20px;
       font-size: 12px;
       font-weight: 700;
-      background-color: #fb8b24;
-      color: #f8f9fa;
+      background-color: $orange_1;
+      color: $white_1;
       cursor: pointer;
       &:hover {
         background: none;
-        border: 1px solid #f8edeb;
+        border: 1px solid $white_3;
       }
     }
     h3 {
       font-size: 17px;
-      color: white;
+      color: $white_1;
       font-weight: 700;
     }
     p {
       font-size: 20px;
-      color: #fb8b24;
+      color: $orange_1;
       font-weight: 700;
       margin-top: 20px;
       margin-bottom: 25px;
@@ -923,24 +919,24 @@
     margin-bottom: 60px;
     outline: none;
     border: none;
-    background-color: #0e2b63;
-    color: #f8f9fa;
+    background-color: $blue_4;
+    color: $white_1;
     &:hover {
-      background: #fb8b24;
+      background: $orange_1;
     }
   }
 }
 
 .bottom_bar {
   display: flex;
-  background-color: #fb8b24;
+  background-color: $orange_1;
   height: 200px;
   padding-left: 15%;
   padding-top: 20px;
 
   h1 {
     font-size: 35px;
-    color: #212529;
+    color: $brown;
     margin-top: 30px;
   }
   .subscribe input {
@@ -950,26 +946,25 @@
     width: 350px;
     height: 42px;
     border-radius: 18px;
-    color: #b10f2e;
     border: none;
   }
   button {
     font-size: 15px;
     padding: 10px 14px;
     margin-left: 50px;
-    background: #062256;
+    background: $blue_5;
     border: none;
-    color: white;
+    color: $white_1;
     cursor: pointer;
     &:hover {
-      background: #0a4491;
+      background: $blue_1;
     }
   }
 }
 
 .footer_content {
-  background-color: #001845;
-  color: #f8f9fa;
+  background-color: $blue_5;
+  color: $white_1;
   padding: 80px 80px 25px 80px;
   @media (max-width: 900px) {
     padding: 20px;
@@ -989,19 +984,19 @@
 
       .fa-brands {
         font-size: 20px;
-        color: #faa307;
+        color: $orange_1;
         cursor: pointer;
         margin-bottom: 10px;
       }
       h3 {
-        color: #fb8b24;
+        color: $orange_1;
         font-size: 18px;
         margin-bottom: 10px;
       }
       span {
         font-size: 15px;
         margin-left: 10px;
-        color: #f8f9fa;
+        color: $white_1;
       }
     }
 
@@ -1025,11 +1020,11 @@
       font-size: 18px;
       margin-bottom: 8px;
       font-weight: 700;
-      color: #fb8b24;
+      color: $orange_1;
     }
     a {
       text-decoration: none;
-      color: #f8f9fa;
+      color: $white_1;
       font-size: 15px;
       line-height: 1.8em;
       cursor: pointer;
@@ -1044,8 +1039,8 @@
     justify-content: left;
     margin-top: 50px;
     gap: 30px;
-    border-top: 1px solid #168aad;
-    border-bottom: 1px solid #168aad;
+    border-top: 1px solid $light_blue_2;
+    border-bottom: 1px solid $light_blue_2;
     @media (max-width: 900px) {
       flex-direction: column;
     }
@@ -1055,15 +1050,15 @@
       margin-top: 10px;
       margin-bottom: 15px;
       font-size: 15px;
-      color: #f8f9fa;
+      color: $white_1;
       &:hover {
-        color: #fb8b24;
+        color: $orange_1;
         text-decoration: underline;
       }
     }
   }
   p {
-    color: #f8f9fa;
+    color: $white_1;
     margin-top: 20px;
     text-align: center;
   }
