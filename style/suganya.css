@@ -16,6 +16,78 @@
   font-family: "Noto Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.headphone_icon .headphone_round {
+  position: fixed;
+  right: 25px;
+  bottom: 45px;
+  border-radius: 50%;
+  background-color: grey;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  font-size: 22px;
+  width: 70px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  color: white;
+  z-index: 1000;
+}
+
+.headphone_icon .headphone_round i {
+  font-size: 32px;
+}
+
+.scroller_top {
+  position: fixed;
+  right: 45px;
+  bottom: 155px;
+  border-radius: 50%;
+  background-color: red;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  font-size: 22px;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  text-decoration: none;
+}
+
+.scroller_top.active {
+  bottom: 155px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
 .navbar_brand {
   display: -ms-grid;
   display: grid;
@@ -1600,69 +1672,71 @@
   background: #fb8b24;
 }
 
-.bottom_bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.news_letter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 3em 8em 3em 8em;
   background-color: #fb8b24;
-  height: 200px;
-  padding-left: 15%;
-  padding-top: 20px;
 }
 
-@media (max-width: 750px) {
-  .bottom_bar {
-    padding: 5px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: auto;
+@media (max-width: 850px) {
+  .news_letter {
+    display: block;
+    padding: 50px;
+    text-align: center;
   }
 }
 
-.bottom_bar h1 {
-  font-size: 35px;
-  color: #212529;
-  margin-top: 30px;
-}
-
-.bottom_bar .subscribe input {
-  padding: 15px;
-  margin-left: 60px;
-  margin-top: 50px;
-  width: 350px;
-  height: 42px;
-  border-radius: 18px;
-  border: none;
-}
-
-@media (max-width: 750px) {
-  .bottom_bar .subscribe input {
-    width: 70%;
-    margin-left: 0;
-    margin-bottom: 10px;
+@media (max-width: 450px) {
+  .news_letter {
+    padding: 30px 20px;
+    font-size: 15px;
   }
 }
 
-.bottom_bar button {
-  font-size: 15px;
-  padding: 10px 14px;
-  margin-left: 50px;
-  background: #001845;
+.news_letter .email {
+  position: relative;
+  margin-top: 25px;
+}
+
+@media (max-width: 850px) {
+  .news_letter .email {
+    margin-top: 60px;
+  }
+}
+
+.news_letter .email input {
   border: none;
+  outline: none;
+  width: 80%;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 40px;
+}
+
+.news_letter .email button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #0e2b63;
   color: #fafafa;
+  padding: 12px 26px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
-  .bottom_bar button {
-    margin-left: 0;
+@media (max-width: 850px) {
+  .news_letter .email button {
+    padding: 17px 10px;
+    font-size: 15px;
   }
-}
-
-.bottom_bar button:hover {
-  background: #023e8a;
 }
 
 .footer_content {

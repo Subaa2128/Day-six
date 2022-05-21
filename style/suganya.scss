@@ -10,6 +10,63 @@
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+.headphone_icon {
+  .headphone_round {
+    position: fixed;
+    right: 25px;
+    bottom: 45px;
+    border-radius: 50%;
+    background-color: grey;
+    box-shadow: 0 0 10px black;
+    font-size: 22px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+    z-index: 1000;
+
+    i {
+      font-size: 32px;
+    }
+  }
+}
+
+.scroller_top {
+  position: fixed;
+  right: 45px;
+  bottom: 155px;
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 0 0 10px black;
+  font-size: 22px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+  text-decoration: none;
+}
+.scroller_top.active {
+  bottom: 155px;
+  pointer-events: auto;
+  opacity: 1;
+}
 
 .navbar_brand {
   display: grid;
@@ -1095,53 +1152,103 @@
   }
 }
 
-.bottom_bar {
-  display: flex;
+.news_letter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3em 8em 3em 8em;
   background-color: $orange_1;
-  height: 200px;
-  padding-left: 15%;
-  padding-top: 20px;
-  @media (max-width: 750px) {
-    padding: 5px;
-    flex-direction: column;
-    height: auto;
+  @media (max-width: 850px) {
+    display: block;
+    padding: 50px;
+    text-align: center;
   }
-
-  h1 {
-    font-size: 35px;
-    color: $brown;
-    margin-top: 30px;
-  }
-  .subscribe input {
-    padding: 15px;
-    margin-left: 60px;
-    margin-top: 50px;
-    width: 350px;
-    height: 42px;
-    border-radius: 18px;
-    border: none;
-    @media (max-width: 750px) {
-      width: 70%;
-      margin-left: 0;
-      margin-bottom: 10px;
-    }
-  }
-  button {
+  @media (max-width: 450px) {
+    padding: 30px 20px;
     font-size: 15px;
-    padding: 10px 14px;
-    margin-left: 50px;
-    background: $blue_5;
-    border: none;
-    color: $white_1;
-    cursor: pointer;
-    @media (max-width: 700px) {
-      margin-left: 0;
+  }
+  .email {
+    position: relative;
+    margin-top: 25px;
+    @media (max-width: 850px) {
+      margin-top: 60px;
     }
-    &:hover {
-      background: $blue_1;
+    input {
+      border: none;
+      outline: none;
+      width: 80%;
+      height: 50px;
+      padding: 0 20px;
+      border-radius: 40px;
+    }
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: $blue_4;
+      color: $white_1;
+      padding: 12px 26px;
+      letter-spacing: 1px;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-bottom-right-radius: 40px;
+      border-top-right-radius: 40px;
+      cursor: pointer;
+      @media (max-width: 850px) {
+        padding: 17px 10px;
+        font-size: 15px;
+      }
     }
   }
 }
+
+// .bottom_bar {
+//   display: flex;
+//   background-color: $orange_1;
+//   height: 200px;
+//   padding-left: 15%;
+//   padding-top: 20px;
+//   @media (max-width: 750px) {
+//     padding: 5px;
+//     flex-direction: column;
+//     height: auto;
+//   }
+
+//   h1 {
+//     font-size: 35px;
+//     color: $brown;
+//     margin-top: 30px;
+//   }
+//   .subscribe input {
+//     padding: 15px;
+//     margin-left: 60px;
+//     margin-top: 50px;
+//     width: 350px;
+//     height: 42px;
+//     border-radius: 18px;
+//     border: none;
+//     @media (max-width: 750px) {
+//       width: 70%;
+//       margin-left: 0;
+//       margin-bottom: 10px;
+//     }
+//   }
+//   button {
+//     font-size: 15px;
+//     padding: 10px 14px;
+//     margin-left: 50px;
+//     background: $blue_5;
+//     border: none;
+//     color: $white_1;
+//     cursor: pointer;
+//     @media (max-width: 700px) {
+//       margin-left: 0;
+//     }
+//     &:hover {
+//       background: $blue_1;
+//     }
+//   }
+// }
 
 .footer_content {
   background-color: $blue_5;

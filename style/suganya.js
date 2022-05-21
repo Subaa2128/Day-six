@@ -122,3 +122,13 @@ $(document).ready(function () {
     $("html ,body").animate({ scrollTop: 0 }, 800);
   });
 });
+
+const scrollbtn = document.querySelector(".scroller_top");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 600) {
+    scrollbtn.classList.add("active");
+  } else {
+    scrollbtn.classList.remove("active");
+  }
+});
