@@ -87,17 +87,19 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-$(".star_slide").slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  autoplay: true,
-  slidesToShow: 1,
-  arrows: false,
+$(document).ready(function () {
+  $(".star_slide").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    autoplay: true,
+    slidesToShow: 1,
+    arrows: false,
+  });
 });
 
 $(document).ready(function () {
-  $(".news_slider").slick({
+  $(".slider2").slick({
     slidesToShow: 1,
     dots: true,
     infinite: true,
