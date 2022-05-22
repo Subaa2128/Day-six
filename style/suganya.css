@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 .button_format, .navbar_brand .navbar .btn button {
   border-radius: 5px;
   cursor: pointer;
@@ -1233,6 +1233,7 @@ html {
 
 .corpiz_app .corpiz h2 {
   font-size: 40px;
+  font-family: "Courgette", cursive;
   margin-bottom: 20px;
   color: #212529;
 }
