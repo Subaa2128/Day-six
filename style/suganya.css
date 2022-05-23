@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Philosopher&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 .button_format, .navbar_brand .navbar .btn button {
   border-radius: 5px;
   cursor: pointer;
@@ -140,7 +140,7 @@ html {
     font-size: 35px;
     margin-left: 40px;
     cursor: pointer;
-    color: #fafafa;
+    color: #fb8b24;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -158,10 +158,16 @@ html {
     right: 0;
     top: 0;
     margin-top: 0;
-    width: 60%;
+    width: 70%;
     height: 100vh;
-    background-color: #023e8a;
+    background-color: #001845;
     padding: 15px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar_brand .navbar {
+    width: 100%;
   }
 }
 
@@ -189,7 +195,7 @@ html {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 15px;
+    padding: 20px;
     color: #fafafa;
   }
 }
@@ -209,7 +215,8 @@ html {
 @media (max-width: 1200px) {
   .navbar_brand .navbar ul li a {
     color: #fafafa;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: 500;
   }
 }
 
@@ -402,7 +409,6 @@ html {
 
 @media (max-width: 900px) {
   .search_bar .search_box {
-    background-color: #fafafa;
     width: 90%;
     -webkit-transform: translate(4%, -70%);
             transform: translate(4%, -70%);
@@ -416,6 +422,7 @@ html {
 }
 
 .search_bar .search_box input {
+  width: 60%;
   height: 45px;
   border-radius: 30px;
   border: none;
@@ -1233,7 +1240,7 @@ html {
 
 .corpiz_app .corpiz h2 {
   font-size: 40px;
-  font-family: "Courgette", cursive;
+  font-family: "Philosopher", sans-serif;
   margin-bottom: 20px;
   color: #212529;
 }
@@ -1329,10 +1336,14 @@ html {
 }
 
 .partner {
-  font-size: 26px;
+  font-size: 28px;
   margin-top: 110px;
   text-align: center;
+}
+
+.partner h2 {
   color: #001845;
+  font-family: "Philosopher", sans-serif;
 }
 
 .swiper {
@@ -1412,6 +1423,13 @@ html {
   .latest_news .star_slide.latest_news_slider .slick-dots {
     -webkit-transform: translate(900%, -100%);
             transform: translate(900%, -100%);
+  }
+}
+
+@media (max-width: 940px) {
+  .latest_news .star_slide.latest_news_slider .slick-dots {
+    -webkit-transform: translate(1200%, -140%);
+            transform: translate(1200%, -140%);
   }
 }
 
@@ -2042,9 +2060,10 @@ html {
 }
 
 .search_second .bcg_colour .input p {
-  font-size: 35px;
+  font-size: 50px;
   color: #fafafa;
-  margin-bottom: 30px;
+  font-family: "Philosopher", sans-serif;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -2064,11 +2083,12 @@ html {
 }
 
 .search_second .bcg_colour .input .input_bar input {
-  width: 60%;
+  width: 50%;
+  height: 50px;
   border-radius: 30px;
-  height: 40px;
-  font-size: 17px;
-  padding-left: 19px;
+  font-size: 18px;
+  padding-left: 20px;
+  outline: none;
 }
 
 .search_second .bcg_colour .input .input_bar i {
@@ -2098,12 +2118,17 @@ html {
   padding: 1em;
   margin-right: 30px;
   margin-bottom: 30px;
-  border-radius: 13px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .content_box_list .content_box h1 {
   color: #ff7d00;
   font-size: 22px;
+}
+
+.content_box_list .content_box h1:hover {
+  text-decoration: underline;
 }
 
 .content_box_list .content_box .tick {

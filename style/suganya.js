@@ -87,6 +87,8 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+// latest news slider
+
 $(document).ready(function () {
   $(".star_slide").slick({
     dots: true,
@@ -109,19 +111,7 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 40) {
-      $(".button-fixed").fadeIn();
-    } else {
-      $(".button-fixed").fadeOut();
-    }
-  });
-
-  $(".button-fixed").click(function () {
-    $("html ,body").animate({ scrollTop: 0 }, 800);
-  });
-});
+// scroll bar
 
 const scrollbtn = document.querySelector(".scroller_top");
 
