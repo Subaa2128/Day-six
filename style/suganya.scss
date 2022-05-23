@@ -2,7 +2,7 @@
 @import "collaborate";
 @import "colors";
 
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Philosopher&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 * {
   margin: 0;
@@ -96,7 +96,7 @@ html {
       font-size: 35px;
       margin-left: 40px;
       cursor: pointer;
-      color: $white_1;
+      color: $orange_1;
       display: flex;
     }
   }
@@ -109,10 +109,13 @@ html {
       right: 0;
       top: 0;
       margin-top: 0;
-      width: 60%;
+      width: 70%;
       height: 100vh;
-      background-color: $blue_1;
+      background-color: $blue_5;
       padding: 15px 0;
+    }
+    @media (max-width: 450px) {
+      width: 100%;
     }
     ul {
       list-style: none;
@@ -123,7 +126,7 @@ html {
       li {
         @media (max-width: 1200px) {
           @include collaborate;
-          padding: 15px;
+          padding: 20px;
           color: $white_1;
         }
         &:hover {
@@ -140,7 +143,8 @@ html {
 
           @media (max-width: 1200px) {
             color: $white_1;
-            font-weight: bold;
+            font-size: 25px;
+            font-weight: 500;
           }
         }
         .fa-caret-down {
@@ -282,7 +286,6 @@ html {
     }
 
     @media (max-width: 900px) {
-      background-color: $white_1;
       width: 90%;
       transform: translate(4%, -70%);
       height: 50px;
@@ -294,6 +297,7 @@ html {
     }
 
     input {
+      width: 60%;
       height: 45px;
       border-radius: 30px;
       border: none;
@@ -675,7 +679,6 @@ html {
         font-size: 20px;
         line-height: 50px;
         padding-right: 20px;
-        // padding: 0 20px 0 15px;
         padding-left: 15px;
         font-weight: 700;
         color: $white_1;
@@ -769,7 +772,6 @@ html {
   height: 200px;
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    // padding: 1em;
     height: auto;
   }
   .user_list {
@@ -777,8 +779,6 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // border: 1px solid $white_1;
-    // border: none;
     border-right: 1px solid $white_1;
 
     @media (max-width: 900px) {
@@ -825,7 +825,7 @@ html {
 
     h2 {
       font-size: 40px;
-      font-family: "Courgette", cursive;
+      font-family: "Philosopher", sans-serif;
       margin-bottom: 20px;
       color: $brown;
     }
@@ -881,10 +881,13 @@ html {
 }
 
 .partner {
-  font-size: 26px;
+  font-size: 28px;
   margin-top: 110px;
   text-align: center;
-  color: $blue_5;
+  h2 {
+    color: $blue_5;
+    font-family: "Philosopher", sans-serif;
+  }
 }
 .swiper {
   width: 100%;
@@ -934,11 +937,13 @@ html {
       .slick-dots {
         position: absolute;
         display: flex;
-        // top: 180px;
         transform: translate(1600%, -130%);
         display: block;
         @media (max-width: 1024px) {
           transform: translate(900%, -100%);
+        }
+        @media (max-width: 940px) {
+          transform: translate(1200%, -140%);
         }
         @media (max-width: 900px) {
           display: inline-block;
@@ -956,11 +961,8 @@ html {
       }
 
       li {
-        // transform: translate(150%, -10%);
-
         button {
           background-color: $gray_4;
-          // padding: 3px;
           border-radius: 50%;
         }
       }
@@ -1153,8 +1155,6 @@ html {
       font-weight: 700;
       border-bottom: 1px solid $gray_1;
       margin-left: 10px;
-
-      // margin-top: -60px;
     }
     button {
       padding: 6px 7px;
@@ -1256,7 +1256,6 @@ html {
         font-size: 15px;
       }
       @media (max-width: 340px) {
-        // padding: 15px 20px;
         left: 190px;
       }
       @media (max-width: 320px) {
@@ -1266,54 +1265,6 @@ html {
     }
   }
 }
-
-// .bottom_bar {
-//   display: flex;
-//   background-color: $orange_1;
-//   height: 200px;
-//   padding-left: 15%;
-//   padding-top: 20px;
-//   @media (max-width: 750px) {
-//     padding: 5px;
-//     flex-direction: column;
-//     height: auto;
-//   }
-
-//   h1 {
-//     font-size: 35px;
-//     color: $brown;
-//     margin-top: 30px;
-//   }
-//   .subscribe input {
-//     padding: 15px;
-//     margin-left: 60px;
-//     margin-top: 50px;
-//     width: 350px;
-//     height: 42px;
-//     border-radius: 18px;
-//     border: none;
-//     @media (max-width: 750px) {
-//       width: 70%;
-//       margin-left: 0;
-//       margin-bottom: 10px;
-//     }
-//   }
-//   button {
-//     font-size: 15px;
-//     padding: 10px 14px;
-//     margin-left: 50px;
-//     background: $blue_5;
-//     border: none;
-//     color: $white_1;
-//     cursor: pointer;
-//     @media (max-width: 700px) {
-//       margin-left: 0;
-//     }
-//     &:hover {
-//       background: $blue_1;
-//     }
-//   }
-// }
 
 .footer_content {
   background-color: $blue_5;
@@ -1432,9 +1383,10 @@ html {
       width: 100%;
 
       p {
-        font-size: 35px;
+        font-size: 50px;
         color: $white_1;
-        margin-bottom: 30px;
+        font-family: "Philosopher", sans-serif;
+        margin-bottom: 40px;
         text-align: center;
       }
 
@@ -1447,11 +1399,12 @@ html {
         gap: 20px;
 
         input {
-          width: 60%;
+          width: 50%;
+          height: 50px;
           border-radius: 30px;
-          height: 40px;
-          font-size: 17px;
-          padding-left: 19px;
+          font-size: 18px;
+          padding-left: 20px;
+          outline: none;
         }
 
         i {
@@ -1475,14 +1428,18 @@ html {
 
   .content_box {
     background-color: $blue_5;
-
     padding: 1em;
     margin-right: 30px;
     margin-bottom: 30px;
-    border-radius: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+
     h1 {
       color: $orange_2;
       font-size: 22px;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .tick {
