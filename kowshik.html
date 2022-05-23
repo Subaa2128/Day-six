@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/kowshik.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+</head>
+
+<body>
+    <!-- loader start's here -->
+
+    <div id="preloader">
+        <div class="preloader-logo">
+            <h1>deberry<sup>TM</sup></h1>
+            <p>acessing store.</p>
+        </div>
+    </div>
+
+
+    <!-- loader end's here -->
+
+    <!-- alert box start here -->
+    <div class="alert_box">
+        <div class="alert_content">
+            <p>
+                This site uses cookies to provide you with a more responsive and
+                personalized service. By using this site you agree to our of cookies.
+                Please read our cookie notice.
+            </p>
+            <div class="alert_accept">
+                <button>Accept cookies</button>
+                <div class="alert_settings">
+                    <img src="/images/tool.png" />
+                    <p>Settings</p>
+                </div>
+            </div>
+        </div>
+        <div class="alert_close">
+            <img src="/images/close_white.svg" />
+            <p class="para">Close</p>
+        </div>
+    </div>
+    <!-- alert box end here -->
+
+
+    <!-- header start's here -->
+
+    <div class="topbar">
+        <div class="topbar-logo">
+            <div class="deberry">
+                <img src="/images/Group 318.svg" />
+            </div>
+
+            <img src="/images/shopping.svg" />
+        </div>
+        <div class="skew">
+            <div class="fingerprint">
+                <img src="/images/fingerprint.svg" />
+                <p onclick="openMenu()">Access</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-title">
+                <h1>Access account</h1>
+                <button class="buttonX" onclick="closeMenu()">&times;</button>
+            </div>
+            <div class="credential-access">
+                <p>Resent credentials.</p>
+                <div class="email-toggle">
+                    <h2>Email</h2>
+                    <div>
+                        <input type="checkbox" class="toggle" id="android" />
+                        <label for="android" class="rounder"></label>
+                    </div>
+                    <h2>Mobile</h2>
+                </div>
+            </div>
+            <div class="email-container">
+                <img src="/images/user.png" />
+                <input type="email" class="input" placeholder="  Email" />
+            </div>
+            <div class="Password-container">
+                <img src="/images/lock.png" />
+                <input type="password" class="input" placeholder="  Password " />
+            </div>
+            <div class="access-btn">
+                <button>Access now</button>
+            </div>
+
+            <div class="pick-up-line">
+                <h1>HUNGRY, but</h1>
+
+                <p>Don't have an account ?</p>
+            </div>
+
+            <img src="/images/Salad_Monochromatic.svg" />
+
+            <div class="account-btn">
+                <button>Create one now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- header end's here -->
+
+    <!-- slider start here  -->
+
+    <div class="slider-container">
+        <div class="content">
+            <h3>Customizable. South Indian</h3>
+            <h1>meals</h1>
+            <div class="media_content">
+                <img src="/images/south-indian-food.svg" />
+                <p>
+                    Eat healthy. Eat homemade.<br />
+                    without going bankrupt.
+                </p>
+            </div>
+            <div class="content_item">
+                <img src="/images/map-pin.png" />
+                <div class="content_location">
+                    <p>now in</p>
+                    <span>Koramangla</span>
+                </div>
+            </div>
+
+            <button>Order now</button>
+        </div>
+
+        <div class="content_two">
+            <h1>kaathuvaakla</h1>
+            <h2>konjam <span> sugar</span></h2>
+            <h3>Tired of Banglore Sugar Sambar ?</h3>
+            <h5>TRY PROPER SOUTH INDIAN MEAL</h5>
+
+            <div class="content2_item">
+                <div class="flip-food">
+                    <img src="/images/food_flip.png" />
+                </div>
+                <div class="item2">
+                    <img src="/images/food.png" />
+                </div>
+                <div class="content2_location">
+                    <img src="/images/map-pin.png" />
+                    <p>now in</p>
+                    <span>Koramangla</span>
+                    <button>Order now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider start end -->
+    <!-- to see pre loader  -->
+    <div class="preloader-visibility">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+
+    </div>
+
+    <!-- to see pre loader  -->
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./style/slick.min.js"></script>
+
+    <script>
+        $(".slider-container").slick({
+            autoplay: false,
+            speed: 800,
+            arrows: false,
+            dots: true,
+            fade: false,
+        });
+
+        const open = document.querySelector(".container");
+        const close = document.querySelector(".buttonX");
+        const closeBtn = document.querySelector(".alert_box .alert_close");
+        const toastLink = document.querySelector(".alert_box");
+
+        function openMenu() {
+            open.style.display = "block";
+        }
+        function closeMenu() {
+            open.style.display = "none";
+        }
+
+        const stopDisplayToast = () => {
+            console.log("click");
+            localStorage.setItem(".displayToast", false);
+
+            toastLink.remove("alert_box");
+        };
+
+        closeBtn.addEventListener("click", stopDisplayToast);
+        toastLink.addEventListener("click", stopDisplayToast);
+    </script>
+    <script>
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
