@@ -1,0 +1,2734 @@
+@import "color";
+
+@font-face {
+    font-family: "grolds";
+    src: url(/fonts/Grold-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "grolds";
+}
+
+.chat-icon {
+
+
+    .chat-circle {
+        position: fixed;
+        right: 20px;
+        bottom: 40px;
+        border-radius: 50%;
+        background-color: $myLightgrey;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        font-size: 20px;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        color: $myGrey;
+        z-index: 900;
+
+        i {
+            font-size: 30px;
+        }
+    }
+
+
+}
+
+.btnScrollToTop {
+    position: fixed;
+    right: 40px;
+    bottom: 150px;
+    border-radius: 50%;
+    background-color: $myGrey;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: $myViolet;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+    z-index: 900;
+}
+
+.btnScrollToTop.active {
+    bottom: 150px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+.topbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 20px 0.1px $myLightgrey;
+    background-color: $myViolet;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    .logo img {
+        width: 200px;
+        height: 56px;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+
+    .topbar-list {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+
+
+        p {
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 400;
+            color: $myLightgrey;
+        }
+
+        button {
+            cursor: pointer;
+            width: 100px;
+            height: 30px;
+            border-radius: 13px;
+            border: none;
+            background-color: $myGrey;
+            outline: none;
+            color: $myWhite;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: $myLightgrey;
+            color: $myGrey;
+            border: 1px solid $myViolet;
+        }
+
+        .list-one {
+            height: 50%;
+            align-items: center;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+
+
+
+
+            i {
+                font-size: 8px;
+            }
+        }
+
+
+        .fa-whatsapp {
+            color: $myGreen;
+            font-size: 20px;
+        }
+
+        .fa-phone {
+            color: $myBlue;
+            font-size: 17px;
+        }
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .topbar-list p:hover {
+        color: $myGrey;
+    }
+
+    h1 {
+        margin-left: 20px;
+        line-height: 1em;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        color: $myGrey;
+    }
+
+
+
+    .drop-one {
+
+        padding: 4px 0 4px 0;
+
+
+        position: relative;
+
+        .sub-drop-list {
+            position: absolute;
+            width: 230px;
+            display: none;
+
+            background-color: $myLightgrey;
+            top: 25px;
+            line-height: 3em;
+            font-size: 16px;
+
+
+
+            .sub1-drop {
+                position: relative;
+
+                .inside-drop {
+                    width: 700px;
+                    background-color: rgb(123, 123, 123);
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    position: absolute;
+                    top: 0;
+                    left: 230px;
+                    display: none;
+
+                    .inside-left {
+                        width: 100%;
+
+                        a {
+                            display: block;
+                            padding: 0;
+                            line-height: 2em;
+                            color: $myViolet;
+
+                        }
+
+                        a:hover {
+                            color: $myGrey;
+                        }
+
+
+                    }
+
+                    .inside-right {
+                        a {
+                            display: block;
+                            line-height: 2em;
+                            color: $myViolet;
+                        }
+
+                        a:hover {
+                            color: $myGrey;
+                        }
+
+                    }
+                }
+
+
+                a {
+                    margin-left: 20px;
+                    color: $myViolet;
+
+                }
+
+            }
+
+            .sub1-drop:hover .inside-drop {
+                display: grid;
+            }
+
+            .sub2-drop {
+                position: relative;
+
+                a {
+                    margin-left: 20px;
+                    color: $myViolet;
+
+                }
+
+                .inside-drop2 {
+
+                    position: absolute;
+                    left: 230px;
+                    width: 700px;
+                    background-color: rgb(123, 123, 123);
+                    display: none;
+                    grid-template-columns: 1fr 1fr;
+                    top: 0;
+
+                    .inside-left2 {
+
+                        a {
+                            display: block;
+                            padding: 0;
+                            line-height: 2em;
+
+
+                        }
+
+                        a:hover {
+                            color: $myGrey;
+                        }
+                    }
+
+                    .inside-right2 {
+                        a {
+                            display: block;
+                            padding: 0;
+                            line-height: 2em;
+
+                        }
+
+                        a:hover {
+                            color: $myGrey;
+                        }
+                    }
+
+                }
+            }
+
+            .sub2-drop:hover .inside-drop2 {
+                display: grid;
+            }
+
+            .sub3-drop {
+                position: relative;
+
+                a {
+                    margin-left: 20px;
+                    color: $myViolet;
+
+                }
+
+                .inside-drop3 {
+
+                    position: absolute;
+                    left: 230px;
+                    width: 700px;
+                    background-color: rgb(123, 123, 123);
+                    display: none;
+                    grid-template-columns: 1fr 1fr;
+                    top: 0;
+
+                    .inside-left3 {
+
+                        a {
+                            display: block;
+                            padding: 0;
+                            line-height: 2em;
+
+                        }
+
+                        a:hover {
+                            color: $myGrey;
+                        }
+                    }
+
+                    .inside-right3 {
+                        a {
+                            display: block;
+                            padding: 0;
+                            line-height: 2em;
+
+                        }
+
+                        a:hover {
+                            color: $myGrey;
+                        }
+                    }
+
+                }
+            }
+
+            .sub3-drop:hover .inside-drop3 {
+                display: grid;
+            }
+
+            .sub4-drop {
+                position: relative;
+
+                a {
+                    margin-left: 20px;
+                    color: $myViolet;
+
+                }
+
+                .inside-drop4 {
+
+                    position: absolute;
+                    left: 230px;
+                    width: 700px;
+                    background-color: rgb(123, 123, 123);
+                    display: none;
+                    grid-template-columns: 1fr 1fr;
+                    top: 0;
+
+                    .inside-left4 {
+
+                        a {
+                            display: block;
+                            padding: 0;
+                            line-height: 2em;
+
+                        }
+
+                        a:hover {
+                            color: $myGrey;
+                        }
+                    }
+
+                    .inside-right4 {
+                        a {
+                            display: block;
+                            padding: 0;
+                            line-height: 2em;
+
+                        }
+
+                        a:hover {
+                            color: $myGrey;
+                        }
+                    }
+
+                }
+            }
+
+            .sub4-drop:hover .inside-drop4 {
+                display: grid;
+            }
+
+            .sub5-drop {
+                position: relative;
+
+                a {
+                    margin-left: 20px;
+                    color: $myViolet;
+
+                }
+
+                .inside-drop5 {
+
+                    position: absolute;
+                    left: 230px;
+                    width: 700px;
+                    background-color: rgb(123, 123, 123);
+                    display: none;
+                    grid-template-columns: 1fr 1fr;
+                    top: 0;
+
+                    .inside-left5 {
+
+                        a {
+                            display: block;
+                            padding: 0;
+                            line-height: 2em;
+
+                        }
+
+                        a:hover {
+                            color: $myGrey;
+                        }
+                    }
+
+                    .inside-right5 {
+                        a {
+                            display: block;
+                            padding: 0;
+                            line-height: 2em;
+
+                        }
+
+                        a:hover {
+                            color: $myGrey;
+
+                        }
+                    }
+
+                }
+            }
+
+            .sub5-drop:hover .inside-drop5 {
+                display: grid;
+            }
+
+            .sub1-drop:hover {
+                background-color: $myGrey;
+            }
+
+            .sub2-drop:hover {
+                background-color: $myGrey;
+            }
+
+            .sub3-drop:hover {
+                background-color: $myGrey;
+            }
+
+            .sub4-drop:hover {
+                background-color: $myGrey;
+            }
+
+            .sub5-drop:hover {
+                background-color: $myGrey;
+            }
+        }
+    }
+
+    .drop-one:hover .sub-drop-list {
+        display: block;
+    }
+
+    .drop-two {
+        padding: 4px 0 4px 0;
+        position: relative;
+
+        a {
+            color: $myViolet;
+        }
+
+
+
+        .sub-drop-list2 {
+            width: 250px;
+            background-color: $myLightgrey;
+            position: absolute;
+            top: 24px;
+            display: none;
+            cursor: pointer;
+
+
+            a {
+                line-height: 2.5em;
+                margin-left: 20px;
+                color: $myViolet;
+
+            }
+
+
+            .sec-sub1-drop {
+                position: relative;
+
+
+
+
+                .sec-inside-drop1 {
+                    position: absolute;
+                    width: 300px;
+                    background-color: rgb(123, 123, 123);
+                    position: absolute;
+                    top: 0;
+                    left: 250px;
+                    display: none;
+                    flex-direction: column;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+
+                }
+
+            }
+
+            .sec-sub1-drop:hover .sec-inside-drop1 {
+                display: flex;
+            }
+
+
+            .sec-sub2-drop {
+                position: relative;
+
+
+
+
+                .sec-inside-drop2 {
+                    position: absolute;
+                    width: 400px;
+                    background-color: rgb(123, 123, 123);
+                    position: absolute;
+                    top: 0;
+                    left: 250px;
+                    display: none;
+                    flex-direction: column;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+
+                }
+
+            }
+
+            .sec-sub2-drop:hover .sec-inside-drop2 {
+                display: flex;
+            }
+
+            .sec-sub3-drop {
+                position: relative;
+
+
+
+
+                .sec-inside-drop3 {
+                    position: absolute;
+                    width: 400px;
+                    background-color: rgb(123, 123, 123);
+                    position: absolute;
+                    top: 0;
+                    left: 250px;
+                    display: none;
+                    flex-direction: column;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+
+                }
+
+            }
+
+            .sec-sub3-drop:hover .sec-inside-drop3 {
+                display: flex;
+            }
+
+
+            .sec-sub4-drop {
+                position: relative;
+
+
+
+
+                .sec-inside-drop4 {
+                    position: absolute;
+                    width: 300px;
+                    background-color: rgb(123, 123, 123);
+                    position: absolute;
+                    top: 0;
+                    left: 250px;
+                    display: none;
+                    flex-direction: column;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+
+                }
+
+            }
+
+            .sec-sub4-drop:hover .sec-inside-drop4 {
+                display: flex;
+            }
+
+
+            .sec-sub5-drop {
+                position: relative;
+
+
+
+
+                .sec-inside-drop5 {
+                    position: absolute;
+                    width: 300px;
+                    background-color: rgb(123, 123, 123);
+                    position: absolute;
+                    top: 0;
+                    left: 250px;
+                    display: none;
+                    flex-direction: column;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+
+                }
+
+            }
+
+            .sec-sub5-drop:hover .sec-inside-drop5 {
+                display: flex;
+            }
+
+
+
+
+
+
+        }
+
+
+
+        .sec-sub1-drop:hover {
+            background-color: $myGrey;
+        }
+
+        .sec-sub2-drop:hover {
+            background-color: $myGrey;
+        }
+
+        .sec-sub3-drop:hover {
+            background-color: $myGrey;
+        }
+
+        .sec-sub4-drop:hover {
+            background-color: $myGrey;
+        }
+
+        .sec-sub5-drop:hover {
+            background-color: $myGrey;
+        }
+    }
+
+    .drop-two:hover .sub-drop-list2 {
+        display: block;
+    }
+
+    .drop-three {
+
+        padding: 4px 0 4px 0;
+        position: relative;
+
+        .sub-drop-list3 {
+            width: 250px;
+            background-color: $myLightgrey;
+            position: absolute;
+            top: 24px;
+            display: none;
+
+
+            a {
+                line-height: 2.5em;
+                margin-left: 20px;
+                color: $myViolet;
+            }
+
+
+
+
+            .third-sub1-drop {
+                position: relative;
+
+
+
+
+                .third-inside-drop1 {
+                    position: absolute;
+                    width: 400px;
+                    background-color: rgb(123, 123, 123);
+                    position: absolute;
+                    top: 0;
+                    left: 250px;
+                    display: none;
+                    flex-direction: column;
+
+                    a {
+                        color: $myViolet;
+                    }
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+                }
+
+
+            }
+
+            .third-sub1-drop:hover .third-inside-drop1 {
+                display: flex;
+            }
+
+            .third-sub2-drop {
+                position: relative;
+
+
+
+
+                .third-inside-drop2 {
+                    position: absolute;
+                    width: 400px;
+                    background-color: rgb(123, 123, 123);
+                    position: absolute;
+                    top: 0;
+                    left: 250px;
+                    display: none;
+                    flex-direction: column;
+
+                    a {
+                        color: $myViolet;
+                    }
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+                }
+
+
+            }
+
+            .third-sub2-drop:hover .third-inside-drop2 {
+                display: flex;
+            }
+        }
+
+
+
+        .third-sub1-drop:hover {
+            background-color: $myGrey;
+        }
+
+        .third-sub2-drop:hover {
+            background-color: $myGrey;
+        }
+    }
+
+    .drop-three:hover .sub-drop-list3 {
+        display: block;
+    }
+
+    .drop-four {
+
+        padding: 4px 0 4px 0;
+        position: relative;
+
+        .sub-drop-list4 {
+            position: absolute;
+            width: 280px;
+            display: none;
+            background-color: $myLightgrey;
+            top: 25px;
+            line-height: 2.5em;
+            font-size: 16px;
+
+            a {
+                color: $myViolet;
+            }
+
+
+
+            .fourth-sub1-drop {
+                position: relative;
+
+                .fourth-inside-drop1 {
+                    width: 300px;
+                    background-color: rgb(123, 123, 123);
+                    flex-direction: column;
+                    position: absolute;
+                    top: 0;
+                    left: 280px;
+                    display: none;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+
+                }
+
+
+                a {
+                    margin-left: 20px;
+
+                }
+
+
+            }
+
+            .fourth-sub1-drop:hover .fourth-inside-drop1 {
+                display: flex;
+            }
+
+            .fourth-sub2-drop {
+                position: relative;
+
+                a {
+                    margin-left: 20px;
+
+                }
+
+                .fourth-inside-drop2 {
+
+                    position: absolute;
+                    left: 280px;
+                    width: 300px;
+                    background-color: rgb(123, 123, 123);
+                    display: none;
+                    flex-direction: column;
+                    top: 0;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+                }
+            }
+
+            .fourth-sub2-drop:hover .fourth-inside-drop2 {
+                display: flex;
+            }
+
+            .fourth-sub3-drop {
+                position: relative;
+
+                a {
+                    margin-left: 20px;
+
+                }
+
+                .fourth-inside-drop3 {
+
+                    position: absolute;
+                    left: 280px;
+                    width: 300px;
+                    background-color: rgb(123, 123, 123);
+                    display: none;
+                    flex-direction: column;
+                    top: 0;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+
+
+                }
+            }
+
+            .fourth-sub3-drop:hover .fourth-inside-drop3 {
+                display: flex;
+            }
+
+            .fourth-sub4-drop {
+                position: relative;
+
+                a {
+                    margin-left: 20px;
+
+                }
+
+                .fourth-inside-drop4 {
+
+                    position: absolute;
+                    left: 280px;
+                    width: 300px;
+                    background-color: rgb(123, 123, 123);
+                    display: none;
+                    flex-direction: column;
+                    top: 0;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+                }
+            }
+
+            .fourth-sub4-drop:hover .fourth-inside-drop4 {
+                display: flex;
+            }
+
+            .fourth-sub5-drop {
+                position: relative;
+
+                a {
+                    margin-left: 20px;
+
+                }
+
+                .fourth-inside-drop5 {
+
+                    position: absolute;
+                    left: 280px;
+                    width: 300px;
+                    background-color: rgb(123, 123, 123);
+                    display: none;
+                    flex-direction: column;
+                    top: 0;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+                }
+            }
+
+            .fourth-sub5-drop:hover .fourth-inside-drop5 {
+                display: flex;
+            }
+
+            .fourth-sub6-drop {
+                position: relative;
+
+                a {
+                    margin-left: 20px;
+
+                }
+
+                .fourth-inside-drop6 {
+
+                    position: absolute;
+                    left: 280px;
+                    width: 300px;
+                    background-color: rgb(123, 123, 123);
+                    display: none;
+                    flex-direction: column;
+                    top: 0;
+
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+                }
+            }
+
+            .fourth-sub6-drop:hover .fourth-inside-drop6 {
+                display: flex;
+            }
+
+            .fourth-sub7-drop {
+                position: relative;
+
+                a {
+                    margin-left: 20px;
+
+                }
+
+                .fourth-inside-drop7 {
+
+                    position: absolute;
+                    left: 280px;
+                    width: 300px;
+                    background-color: rgb(123, 123, 123);
+                    display: none;
+                    flex-direction: column;
+                    top: 0;
+
+                    a:hover {
+                        color: $myGrey;
+                    }
+
+
+                }
+            }
+
+            .fourth-sub7-drop:hover .fourth-inside-drop7 {
+                display: flex;
+            }
+
+            .fourth-sub1-drop:hover {
+                background-color: $myGrey;
+            }
+
+            .fourth-sub2-drop:hover {
+                background-color: $myGrey;
+            }
+
+            .fourth-sub3-drop:hover {
+                background-color: $myGrey;
+            }
+
+            .fourth-sub4-drop:hover {
+                background-color: $myGrey;
+            }
+
+            .fourth-sub5-drop:hover {
+                background-color: $myGrey;
+            }
+
+            .fourth-sub6-drop:hover {
+                background-color: $myGrey;
+            }
+
+            .fourth-sub7-drop:hover {
+                background-color: $myGrey;
+            }
+        }
+    }
+
+    .drop-four:hover .sub-drop-list4 {
+        display: block;
+    }
+
+
+    .drop-five {
+        padding: 4px 0 4px 0;
+        position: relative;
+
+        .sub5-menu {
+            width: 150px;
+            background-color: $myLightgrey;
+            position: absolute;
+            top: 24px;
+            display: none;
+            flex-direction: column;
+
+            a {
+                padding: 11px;
+                color: $myViolet;
+            }
+
+            a:hover {
+                background-color: $myGrey;
+            }
+        }
+    }
+
+    .drop-five:hover .sub5-menu {
+        display: flex;
+    }
+
+    .drop-one:hover .sub-drop-list {
+        display: block;
+    }
+
+
+
+
+    .sub-drop-list {
+        display: none;
+    }
+}
+
+.sub1-menu:hover .inside-drop {
+    display: flex;
+}
+
+.list-one:hover .sub1-menu {
+    display: block;
+}
+
+
+section {
+    background-image: url(/asserts/new-home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+
+
+    .search-bar {
+        width: 55%;
+        margin: auto;
+        margin-top: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        border-radius: 13px;
+        border: 1px solid $myMidgrey;
+
+        input {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            background: none;
+            padding-left: 10px;
+            font-size: 20px;
+            font-weight: 200;
+        }
+
+        i {
+            padding: 10px;
+            color: $myGrey;
+            cursor: pointer;
+        }
+
+    }
+
+    h2 {
+        padding: 1em;
+        text-align: center;
+        font-size: 25px;
+        color: $myGrey;
+
+    }
+
+    .hero-list {
+        width: 650px;
+        margin: auto;
+
+
+
+
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            flex-wrap: wrap;
+
+
+            li {
+                p {
+                    cursor: pointer;
+                    background-color: $myLightgrey;
+                    font-weight: bold;
+                    font-size: 15px;
+                    border-radius: 10px;
+                    margin: 4px 7px;
+                    padding: 6px;
+                    color: $myViolet;
+
+                    &:hover {
+                        background: $myGrey;
+                        color: $myWhite;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+
+        @media (max-width:500px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .google-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .google-play {
+            img {
+                width: 200px;
+            }
+        }
+
+
+
+
+    }
+}
+
+.blog {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 2em;
+
+
+
+    .corpbiz {
+
+
+        background-color: $myLightgrey;
+        width: 400px;
+        box-shadow: 0 2px 10px 0 $myLightgrey;
+        border-radius: 13px;
+
+        h1 {
+            padding: 1em;
+            font-size: 35px;
+            color: $myGrey;
+        }
+
+        p {
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.2em;
+            color: $myViolet;
+        }
+
+
+
+    }
+
+    .blog-box1 {
+        width: 280px;
+        animation: pulse 1.5s ease-out infinite;
+        box-shadow: 0 2px 10px 0 $myMidgrey;
+
+        @keyframes pulse {
+            50% {
+                transform: scale(0.9);
+            }
+        }
+
+        border-radius: 13px;
+        background-color: $myViolet;
+        z-index: -200;
+
+
+
+        h1 {
+            padding: 1em;
+            font-size: 30px;
+            color: $myLightgrey;
+            text-align: center;
+        }
+
+        p {
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.2em;
+            color: $myGrey;
+        }
+    }
+
+
+
+
+
+}
+
+.faith {
+    h1 {
+        font-size: 43px;
+        padding: 2em;
+        color: $myLightgrey;
+
+    }
+
+    span {
+        color: $myGrey;
+        font-family: 'Kaushan Script', cursive;
+    }
+
+
+}
+
+.iframe-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+
+
+    .text-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+
+        .vertical-text {
+            writing-mode: vertical-lr;
+            letter-spacing: 12px;
+            font-size: 25px;
+            padding: 2em;
+            color: $myViolet;
+
+        }
+
+
+        .working-process {
+            padding: 3em;
+
+            h3 {
+                font-size: 45px;
+                margin-bottom: 30px;
+                color: $myGrey;
+
+            }
+
+            p {
+                font-size: 19px;
+                font-weight: 200;
+                line-height: 1em;
+                color: $myLightgrey;
+            }
+        }
+
+        .iframe iframe {
+
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: $myGrey;
+    padding: 2em;
+
+
+
+    .service-list {
+        display: flex;
+
+
+
+
+        .service-box {
+
+
+
+            button {
+                width: 300px;
+                height: 40px;
+                margin-bottom: 7px;
+                border-radius: 10px;
+                display: block;
+                background-color: $myLightgrey;
+                font-size: 20px;
+                border: none;
+                outline: none;
+                padding-left: 10px;
+                padding-right: 10px;
+                color: $myGrey;
+                cursor: pointer;
+            }
+
+
+            button:hover {
+                background-color: $myViolet;
+
+            }
+
+
+
+
+
+
+
+
+
+        }
+
+        .text-ver {
+            writing-mode: vertical-lr;
+            font-size: 25px;
+            letter-spacing: 12px;
+            color: $myWhite;
+            padding: 1em;
+
+        }
+
+
+
+
+    }
+
+
+    .registration-box {
+        background-color: $myViolet;
+        margin-left: 55px;
+        border-radius: 13px;
+
+
+
+        img {
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding: 10px;
+
+
+        }
+
+
+        h5 {
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            color: $myGrey;
+        }
+
+        p {
+            text-align: center;
+            color: $myLightgrey;
+            margin-bottom: 30px;
+            font-size: 17px;
+            line-height: 1.5em;
+
+        }
+
+        button {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 100px;
+            height: 30px;
+            border-radius: 13px;
+            border: none;
+            background-color: $myGrey;
+            outline: none;
+            color: $myWhite;
+            font-size: 16px;
+            margin-bottom: 20px;
+            z-index: -1;
+
+
+        }
+
+        button:hover {
+            background-color: $myLightgrey;
+            color: $myViolet;
+            border: 1px solid $myViolet;
+        }
+
+
+
+
+    }
+
+
+
+}
+
+
+.user-info {
+    width: 100%;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+    background-color: $myLightgrey;
+
+
+
+
+    .user-list {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        border-right: 1px solid $myGrey;
+        color: $myWhite;
+        cursor: pointer;
+
+
+
+
+
+
+
+    }
+
+    .user-list:hover {
+        background-color: $myGrey;
+        color: $myWhite;
+    }
+
+
+
+
+
+
+}
+
+.partner {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding: 2em;
+    color: $myLightgrey;
+
+    span {
+        color: $myGrey;
+        font-family: 'Kaushan Script', cursive;
+    }
+}
+
+.swiper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1000;
+
+
+
+
+    .swiper-slide {
+        width: 100%;
+        height: 200px;
+        padding: 4em;
+        z-index: -1000;
+
+
+        img {
+            cursor: pointer;
+            display: block;
+            width: 150px;
+            height: 80px;
+            place-items: center;
+            z-index: -1000;
+        }
+    }
+}
+
+
+.container-list {
+    width: 100%;
+
+
+
+
+    .slider-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+
+
+    .slides {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: right;
+        border-right: 1px solid $myGrey;
+        padding-right: 20px;
+        animation: fallinout 2s ease-in;
+
+
+
+        .lines {
+            display: flex;
+            justify-content: right;
+            margin-top: 10px;
+        }
+
+        .line {
+            padding: 1.5px 10px;
+            margin: 0 3px;
+            background-color: $myGrey;
+            cursor: pointer;
+            transition: backgroud-color 0.3s ease;
+        }
+
+        .line:hover {
+            background-color: $myLightgrey;
+        }
+
+
+        .slide1 {
+
+
+
+
+
+
+            .image1 {
+                padding-bottom: 20px;
+
+
+
+
+
+                .fa-user-graduate {
+                    background-color: $myGrey;
+                    border-radius: 50%;
+                    font-size: 40px;
+                    width: 70px;
+                    height: 70px;
+                    display: inline-flex;
+                    place-items: center;
+                    align-items: center;
+                    justify-content: center;
+                    color: $myWhite;
+
+                }
+
+            }
+
+            .fa-star {
+                color: $myMidgrey;
+
+            }
+
+        }
+
+
+
+    }
+
+
+
+    p {
+        font-size: 18px;
+        color: $myLightgrey;
+        margin-bottom: 10px;
+    }
+
+    h6 {
+        font-size: 20px;
+        color: $myMidgrey;
+    }
+}
+
+
+.advertisement {
+    background-image: url(/asserts/mobile-app-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 130px;
+
+
+    .advertisment-left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: 30px;
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 50%;
+        }
+
+
+    }
+
+    .advertisment-right {
+        img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
+            top: 10px;
+        }
+
+    }
+
+
+}
+
+@media (max-width:600px) {
+    .advertisement {
+        grid-template-columns: 1fr;
+    }
+}
+
+.visit-line {
+    padding: 2em;
+    font-size: 23px;
+
+    span {
+        color: $myGrey;
+    }
+}
+
+.article-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 2em;
+
+    .square {
+        background-color: $myLightgrey;
+        padding: 1em;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 0 20px 0.1px $myLightgrey;
+
+        transition: 0.3s;
+
+        .fa-user-graduate {
+            font-size: 25px;
+            color: $myGrey;
+            padding-right: 10px;
+        }
+
+        i {
+            font-size: 16px;
+
+        }
+
+        span {
+            color: $myMidgrey;
+        }
+
+        button {
+            padding: 4px 5px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            margin-top: 80px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            background-color: $myGrey;
+            color: $myWhite;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        h3 {
+            color: $myWhite;
+        }
+
+        p {
+            color: $myGrey;
+        }
+
+
+
+
+    }
+
+
+}
+
+.read {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    button {
+        cursor: pointer;
+        padding: 8px 25px;
+        font-size: 20px;
+        border-radius: 13px;
+        outline: none;
+        border: none;
+        background-color: $myLightgrey;
+        color: $myGrey;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.2);
+    }
+
+
+}
+
+
+
+
+.bottom-bar {
+    width: 100%;
+    height: 150px;
+    background-color: $myGrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+
+
+    span {
+        color: $myLightgrey;
+
+    }
+
+    h1 {
+        color: $myWhite;
+
+    }
+
+
+    .int {
+        width: 400px;
+        height: 35px;
+        background-color: aliceblue;
+        border-radius: 13px;
+    }
+
+    input {
+        width: 250px;
+        height: 35px;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 15px;
+    }
+
+    button {
+        width: 147px;
+        height: 35px;
+        border-radius: 0 13px 13px 0;
+        border: none;
+        outline: none;
+        background: none;
+        color: $myWhite;
+        background-color: $myLightgrey;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+
+
+
+}
+
+.footer-container {
+
+    background-color: $myLightgrey;
+    padding: 4em;
+
+
+    .footer-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+
+
+
+
+        .social-media {
+
+            display: flex;
+            flex-direction: column;
+
+            .fa-brands {
+                font-size: 25px;
+                color: $myGrey;
+                cursor: pointer;
+            }
+
+            span {
+                font-size: 15px;
+                color: $myMidgrey;
+            }
+
+            span:hover {
+                color: $myGrey;
+            }
+
+
+        }
+
+        .business {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ngo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tax {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .compliance {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: $myGrey;
+        }
+
+        a {
+            color: $myMidgrey;
+            font-size: 16px;
+            font-weight: 100;
+            line-height: 2em;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: $myGrey;
+        }
+
+
+    }
+
+    .footer-block {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 20px;
+        border-top: 1px solid $myViolet;
+        border-bottom: 1px solid $myViolet;
+
+
+        a {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: $myGrey;
+        }
+
+        a:hover {
+            color: $myViolet;
+        }
+
+    }
+
+    p {
+        color: $myMidgrey;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1280px) {
+
+
+
+    .topbar .topbar-list {
+        display: none;
+
+
+
+    }
+
+    .topbar {
+        .menu {
+            background-color: $myGrey;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            cursor: pointer;
+
+
+            .hamburger {
+                font-size: 30px;
+
+
+                place-items: center;
+                display: block;
+                display: flex;
+                align-items: center;
+
+
+
+                color: $myViolet;
+            }
+        }
+
+
+    }
+
+
+
+
+}
+
+@media (max-width:1030px) {
+    .service-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+        margin-top: 100px;
+
+
+        .service-list {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .registration-box {
+            padding: 10px;
+            margin: 0;
+
+            p {
+                margin-bottom: 20px;
+            }
+
+
+        }
+    }
+}
+
+@media (max-width:850px) {
+
+
+    .blog {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1em;
+        width: 100%;
+        gap: 20px;
+
+        .corpbiz {
+            width: 100%;
+        }
+
+        .blog-box1 {
+            width: 100%;
+            animation: none;
+        }
+    }
+
+    .faith h1 {
+        padding: 15px;
+    }
+
+    .iframe-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+        margin-top: 100px;
+
+
+        .service-list {
+            justify-content: center;
+            align-items: center;
+
+
+            .service-box {
+
+
+                button {
+                    width: 100%;
+                }
+
+            }
+
+
+        }
+
+        .service-block-right {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .registration-box {
+            padding: 10px;
+            margin: 0;
+
+            p {
+                margin-bottom: 20px;
+            }
+
+
+        }
+    }
+
+    .user-info {
+        grid-template-columns: 1fr;
+        height: auto;
+
+
+        .user-list {
+            padding: 3em 0;
+            border-bottom: 1px solid $myGrey;
+            border-right: none;
+        }
+    }
+
+    .container-list {
+        .slider-container {
+            grid-template-columns: 1fr;
+
+            .slides {
+                justify-content: center;
+                align-items: center;
+                padding-right: 6px;
+            }
+
+        }
+    }
+
+    .article-list {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .read {
+        margin-top: 30px;
+    }
+
+    .bottom-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-container {
+
+
+
+        .footer-list {
+            grid-template-columns: 1fr;
+        }
+
+
+    }
+}
+
+
+@media (max-width:650px) {
+
+
+    .search-bar {
+        width: 60%;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .hero-list {
+        display: none;
+    }
+
+    .iframe-container {
+
+        .text-list {
+            .working-process {
+                padding: 10px;
+            }
+
+            .vertical-text {
+                padding: 10px;
+            }
+        }
+
+        .iframe {
+            display: none;
+        }
+    }
+
+
+
+    .footer-container {
+        .footer-block {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+
+
+
+}
+
+@media (max-width:500px) {
+
+    .footer-container {
+
+        padding: 2em;
+    }
+
+
+    .bottom-bar {
+        height: 200px;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .int {
+            width: 70%;
+
+        }
+
+        button {
+            margin-top: 10px;
+            border-radius: 11px;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+    }
+
+
+    .topbar {
+
+        .logo {
+
+            img {
+                width: 100px;
+                height: 40px;
+            }
+        }
+    }
+
+}
+
+
+
+// start up html start here
+
+
+
+.search-items {
+    margin-top: 70px;
+
+
+
+    .bcg-color {
+        width: 100%;
+        height: 70vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .inputs {
+
+            width: 100%;
+
+
+            p {
+                font-size: 35px;
+                color: $myWhite;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .input-bar {
+                place-items: center;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+
+
+
+                input {
+                    width: 60%;
+                    border-radius: 13px;
+                    height: 40px;
+                    font-size: 17px;
+                    padding-left: 20px;
+                }
+
+                i {
+                    font-size: 20px;
+                    place-items: center;
+                    color: $myWhite;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: $myWhite;
+    padding: 1em;
+
+
+
+
+    .content-box {
+        background-color: $myViolet;
+        padding: 1em;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        border-radius: 13px;
+
+
+
+
+        .tick {
+            margin-top: 20px;
+            display: block;
+
+
+            span {
+                font-size: 18px;
+                color: $myLightgrey;
+            }
+
+            i {
+                margin-bottom: 10px;
+                font-size: 20px;
+                margin-right: 10px;
+                color: $myGrey;
+
+            }
+        }
+    }
+}
+
+@media (max-width:850px) {
+
+    .content {
+        grid-template-columns: 1fr;
+        padding: 0;
+
+        .content-box {
+            margin-right: 0;
+            border-radius: none;
+        }
+    }
+}
+
+
+.service-block-right {
+    display: none;
+}
+
+
+
+
+
+// start up html start end 
+
+
+
+// plcr start here
+
+.front-img {
+    img {
+        width: 100%;
+    }
+}
+
+.signup-container {
+
+    width: 100%;
+    place-items: center;
+    background-color: rgb(42, 161, 176);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin: auto;
+    margin-top: 80px;
+    box-shadow: 0 0 20px 0.1px $myLightgrey;
+
+
+
+
+    .consultation-container {
+
+        width: 100%;
+        height: 100%;
+        background-color: $myViolet;
+        padding: 2em;
+
+        h1 {
+            color: $myGrey;
+            font-size: 39px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: $myLightgrey;
+            line-height: 1.5em;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .click {
+            display: flex;
+            gap: 20px;
+
+
+            .click1 {
+                button {
+                    border-radius: 15px;
+                    border: none;
+                    outline: none;
+                    width: 100px;
+                    height: 35px;
+                    background-color: $myGrey;
+                    cursor: pointer;
+                    color: $myViolet;
+                }
+            }
+
+            .click2 {
+                button {
+                    cursor: pointer;
+                    font-size: 15px;
+                    border-radius: 13px;
+                    border: none;
+                    outline: none;
+                    width: 300px;
+                    height: 35px;
+                    background-color: $myLightgrey;
+                    color: $myViolet;
+                }
+            }
+        }
+
+
+
+    }
+
+    .starter-container {
+
+        width: 100%;
+        height: 100%;
+        background-color: $myLightgrey;
+        padding: 2em;
+
+        h1 {
+            margin-bottom: 42px;
+            color: $myViolet;
+        }
+
+        .input-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            cursor: pointer;
+
+            input {
+                height: 35px;
+                padding-left: 10px;
+            }
+
+            button {
+                height: 35px;
+                border: none;
+                border-radius: 13px;
+                outline: none;
+                background-color: $myGrey;
+                cursor: pointer;
+                color: $myViolet;
+            }
+
+            li {
+                display: flex;
+
+
+            }
+
+            p {
+                margin-top: 8px;
+                place-items: center;
+                margin-right: 10px;
+                font-size: 18px;
+                color: $myGreen;
+
+            }
+
+            .switch-user {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                place-items: center;
+
+
+
+                .toggle {
+                    visibility: hidden;
+                    position: absolute;
+                    left: 0;
+                    margin-left: 10px;
+                }
+
+                .toggle:checked+.rounded {
+                    background-color: greenyellow;
+                }
+
+                .toggle:checked+.rounded::after {
+                    left: 20px;
+                    transform: translateX(-100%);
+                    transition: all ease-out 0.2s;
+                    background-color: $myGreen;
+                }
+
+                .rounded {
+                    display: inline-block;
+                    width: 15px;
+                    height: 7px;
+                    border-radius: 11px;
+                    background-color: rgb(209, 211, 207);
+                    cursor: pointer;
+                    position: relative;
+                }
+
+                .rounded::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $myGreen;
+                    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+                    position: absolute;
+                    left: 0;
+                    top: -1.3px;
+                    transform: translateX(-50%);
+                    transition: all ease-out 0.2s;
+                }
+            }
+
+        }
+
+        .customer {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 22px;
+            color: $myGrey;
+
+            p {
+                color: $myViolet;
+            }
+
+        }
+    }
+}
+
+@media (max-width:850px) {
+    .signup-container {
+        margin-top: 70px;
+        grid-template-columns: 1fr;
+        padding: 0;
+
+        .consultation-container {
+            padding: 1em;
+        }
+
+        .starter-container {
+            padding: 1em;
+        }
+    }
+
+}
+
+@media (max-width:450px) {
+
+
+    .click {
+        flex-direction: column;
+    }
+
+    .click2 button {
+        width: 100px;
+    }
+
+    .signup-container .starter-container .input-content {
+        grid-template-columns: 1fr;
+    }
+
+
+    .signup-container .starter-container .customer {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+
+}
